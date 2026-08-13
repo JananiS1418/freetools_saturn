@@ -1,0 +1,241 @@
+/* ==========================================================================
+   Why Choose Saturn Guidance Section
+   ========================================================================== */
+
+.saturn-why-choose-section {
+    padding: 30px 20px 30px 20px;
+    background-color: #fdfaf6; /* Very subtle warm cream background */
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Header --- */
+.why-choose-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.why-choose-subtitle-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.wc-line {
+    width: 30px;
+    height: 1px;
+    background-color: #cf9d55;
+    opacity: 0.6;
+}
+
+.wc-diamond {
+    width: 6px;
+    height: 6px;
+    background-color: #cf9d55;
+    transform: rotate(45deg);
+    margin: 0 15px;
+}
+
+.why-choose-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #3b2c6e;
+    text-transform: uppercase;
+}
+
+.why-choose-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #3b2c6e;
+    margin: 0 0 15px 0;
+}
+
+.why-choose-title .gold-text {
+    color: #cf9d55;
+}
+
+.wc-title-ornament {
+    color: #cf9d55;
+    margin: 15px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wc-title-ornament svg {
+    width: 40px;
+    height: 20px;
+}
+
+.why-choose-desc {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Cards Grid --- */
+.why-choose-grid-wrapper {
+    position: relative;
+}
+
+.why-choose-connecting-line {
+    position: absolute;
+    top: 60px; /* Aligns exactly with the center of the icons (30px padding + 30px half-height) */
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    border-top: 1px dashed rgba(207, 157, 85, 0.4);
+    z-index: 1;
+}
+
+/* The diamonds between the cards on the connecting line */
+.why-choose-connecting-line .connector-diamond {
+    position: absolute;
+    top: -4px;
+    width: 7px;
+    height: 7px;
+    background-color: #cf9d55;
+    transform: rotate(45deg);
+}
+
+.connector-diamond.d1 { left: 16.66%; }
+.connector-diamond.d2 { left: 33.33%; }
+.connector-diamond.d3 { left: 50%; }
+.connector-diamond.d4 { left: 66.66%; }
+.connector-diamond.d5 { left: 83.33%; }
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Card --- */
+.why-choose-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 15px 25px 15px;
+    text-align: center;
+    border: 1px solid rgba(207, 157, 85, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(59, 44, 110, 0.08);
+    border-color: rgba(207, 157, 85, 0.6);
+}
+
+.why-choose-card:hover .wc-card-icon svg {
+    transform: scale(1.15);
+    color: #cf9d55;
+}
+
+.why-choose-card:hover .wc-card-divider {
+    width: 40px;
+    opacity: 1;
+}
+
+.wc-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #cf9d55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.wc-card-icon svg {
+    width: 28px;
+    height: 28px;
+    color: #3b2c6e;
+    stroke-width: 1.2;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.wc-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #3b2c6e;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.wc-card-divider {
+    width: 20px;
+    height: 1px;
+    background-color: #cf9d55;
+    margin: 0 auto 15px auto;
+    opacity: 0.5;
+    transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+.wc-card-text {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Section Bottom Decor --- */
+.wc-bottom-decor {
+    text-align: center;
+    margin-top: 60px;
+    color: #cf9d55;
+}
+
+.wc-bottom-decor svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1199px) {
+    .why-choose-title { font-size: 40px; }
+    .why-choose-card { padding: 25px 10px; }
+    .wc-card-title { font-size: 16px; }
+    .wc-card-text { font-size: 11px; }
+}
+
+@media (max-width: 991px) {
+    .why-choose-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    .why-choose-connecting-line { display: none; }
+    .why-choose-title { font-size: 34px; }
+}
+
+@media (max-width: 767px) {
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .why-choose-header { margin-bottom: 40px; }
+    .why-choose-title { font-size: 28px; }
+    .why-choose-desc { font-size: 15px; }
+}

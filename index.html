@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astropedia Navbar</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/saturn_banner.css">
+    <link rel="stylesheet" href="css/saturn_guidance.css">
+    <link rel="stylesheet" href="css/saturn_why_choose.css">
+    <link rel="stylesheet" href="css/saturn_about.css">
+    <link rel="stylesheet" href="css/saturn_faq.css">
+    <script src="js/navbar.js" defer></script>
+    <script src="js/saturn_faq.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="navbar-container">
+
+            <!-- Left: Logo -->
+            <a href="/" class="brand-logo">
+                <img src="https://www.astroved.com/astropedia/assets/images/astropedia-logo.svg" alt="Astropedia Logo"
+                    class="logo-img">
+            </a>
+
+            <!-- Center: Navigation Links (Desktop) -->
+            <nav class="main-nav desktop-only">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Home <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li><a href="#">AstroVed Home</a></li>
+                                <li><a href="#">Astropedia Home</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">108 Divya Desam <span class="badge-new">NEW</span></a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Festivals <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li><a href="#">Moon Phases(Thithi)</a></li>
+                                <li><a href="#">Yearly Calendar</a></li>
+                                <li><a href="#">Hindu Calendar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Fasting <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li><a href="#">Weekly</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Deities <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li><a href="#">Gods</a></li>
+                                <li><a href="#">Goddess</a></li>
+                                <li><a href="#">Mantras</a></li>
+                                <li><a href="#">Virtual Pooja</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Temples <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list">
+                                <li><a href="#">North India</a></li>
+                                <li><a href="#">South India</a></li>
+                                <li><a href="#">West India</a></li>
+                                <li><a href="#">East India</a></li>
+                                <li><a href="#">108 Divya Desam</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Astrology <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list scrollable-menu">
+                                <li><a href="#">Hora</a></li>
+                                <li><a href="#">Planets</a></li>
+                                <li><a href="#">Vastu</a></li>
+                                <li><a href="#">Numerology</a></li>
+                                <li><a href="#">Nakshatras (Stars)</a></li>
+                                <li><a href="#">Panchangam</a></li>
+                                <li><a href="#">Today Tithi [Moon Phase]</a></li>
+                                <li><a href="#">Rahukalam</a></li>
+                                <li><a href="#">Birth Date Astrology</a></li>
+                                <li><a href="#">Marriage Prediction</a></li>
+                                <li><a href="#">Ask Saibaba</a></li>
+                                <li><a href="#">Moon Signs</a></li>
+                                <li><a href="#">Choghadiya</a></li>
+                                <li><a href="#">Jupiter Retrograde</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#">Free Tools <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul class="dropdown-list scrollable-menu">
+                                <li><a href="#">Love Calculator</a></li>
+                                <li><a href="#">Dasa Bhukti</a></li>
+                                <li><a href="#">Horoscope Matching</a></li>
+                                <li><a href="#">Nalla Neram</a></li>
+                                <li><a href="#">Chandrashtama</a></li>
+                                <li><a href="#">Birth Chart</a></li>
+                                <li><a href="#">Hora Watch</a></li>
+                                <li><a href="#">More Free Tools</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Astrology Services</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Right: Premium Icon Dock (All Screens) -->
+            <div class="right-actions premium-icon-dock">
+                <!-- Speak to Astrologer Button -->
+                <a href="#" class="header-cta-btn"
+                    style="background: #4C35E6; color: #ffffff; border-radius: 20px; padding: 8px 20px; font-size: 13px; font-weight: 600; text-decoration: none; margin-right: 15px; display: inline-flex; align-items: center; justify-content: center; height: 36px; transition: all 0.3s;">
+                    Speak to Astrologer
+                </a>
+
+                <!-- Search -->
+                <a href="#" class="dock-icon" id="desktopSearchBtn" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
+
+                <!-- Location -->
+                <div class="dock-item-wrapper">
+                    <a href="#" class="dock-icon" id="locationBtn" title="Location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </a>
+                    <div class="dock-dropdown" id="locationDropdown">
+                        <div class="dock-widget-header"
+                            style="flex-direction: column; align-items: flex-start; gap: 4px; border-bottom: none; padding-bottom: 0;">
+                            <span class="dock-widget-title"
+                                style="font-size: 11px; color: #64748b; text-transform: uppercase;">Current
+                                Location</span>
+                            <span style="font-size: 14px; color: #1e3a8a; font-weight: 600;">Chennai, India</span>
+                        </div>
+                        <div class="dock-widget-header" style="margin-top: 10px; padding-top: 10px;">
+                            <span class="dock-widget-title">Set Location</span>
+                        </div>
+                        <div class="dock-widget-body">
+                            <div class="input-group luxury-input dock-input-group">
+                                <select id="dockCountry">
+                                    <option value="" disabled selected hidden>Country</option>
+                                </select>
+                            </div>
+                            <div class="input-group luxury-input dock-input-group mt-2">
+                                <input type="text" id="dockCity" placeholder="Enter Your City">
+                            </div>
+                            <button class="btn-calculate luxury-btn mt-3"
+                                style="width: 100%; padding: 8px; font-size: 13px;">Update</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date -->
+                <div class="dock-item-wrapper">
+                    <a href="#" class="dock-icon" id="dateBtn" title="Date">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </a>
+                    <div class="dock-dropdown" id="dateDropdown">
+                        <div class="dock-widget-header">
+                            <span class="dock-widget-title" id="calendarMonthYear">August 2026</span>
+                            <div class="calendar-nav">
+                                <button id="prevMonth">&lt;</button>
+                                <button id="nextMonth">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="dock-widget-body">
+                            <div id="miniCalendar" class="mini-calendar">
+                                <!-- Calendar populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hamburger Menu (Mobile/Tablet) -->
+                <button class="hamburger-btn" id="menuToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                        stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dropdown Search Bar -->
+        <div id="dropdownSearchBar" class="dropdown-search-bar">
+            <div class="search-bar-container">
+                <svg class="dropdown-search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="dropdownSearchInput" class="dropdown-search-input"
+                    placeholder="Search AstroVed...">
+                <button id="closeDropdownSearchBtn" class="close-dropdown-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Off-Canvas Mobile Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <a href="/" class="drawer-logo">
+                <img src="https://cdn.astroved.com/images/images-av/AstroVed-Logo.svg" alt="AstroVed Logo"
+                    class="logo-img">
+            </a>
+            <button class="close-drawer-btn" id="closeDrawer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#5C45FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Additional Info (Date & Location) Removed as it is now in the main header -->
+
+        <div class="drawer-content">
+            <div class="drawer-cta-wrapper">
+                <a href="#"
+                    style="background: #4C35E6; color: #ffffff; width: 100%; display: flex; justify-content: center; padding: 12px; font-weight: 600; font-size: 14px; text-decoration: none; border-radius: 25px; transition: all 0.3s;">Speak
+                    to Astrologer</a>
+            </div>
+            <ul class="drawer-nav">
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Home <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu">
+                        <li><a href="#">AstroVed Home</a></li>
+                        <li><a href="#">Astropedia Home</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="drawer-link">108 Divya Desam <span class="badge-new"
+                            style="position:static; margin-left:8px;">New</span></a></li>
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Festivals <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu">
+                        <li><a href="#">Moon Phases(Thithi)</a></li>
+                        <li><a href="#">Yearly Calendar</a></li>
+                        <li><a href="#">Hindu Calendar</a></li>
+                    </ul>
+                </li>
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Fasting <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu">
+                        <li><a href="#">Weekly</a></li>
+                    </ul>
+                </li>
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Deities <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu">
+                        <li><a href="#">Gods</a></li>
+                        <li><a href="#">Goddess</a></li>
+                        <li><a href="#">Mantras</a></li>
+                        <li><a href="#">Virtual Pooja</a></li>
+                    </ul>
+                </li>
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Temples <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu">
+                        <li><a href="#">North India</a></li>
+                        <li><a href="#">South India</a></li>
+                        <li><a href="#">West India</a></li>
+                        <li><a href="#">East India</a></li>
+                        <li><a href="#">108 Divya Desam</a></li>
+                    </ul>
+                </li>
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Astrology <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu scrollable-submenu">
+                        <li><a href="#">Hora</a></li>
+                        <li><a href="#">Planets</a></li>
+                        <li><a href="#">Vastu</a></li>
+                        <li><a href="#">Numerology</a></li>
+                        <li><a href="#">Nakshatras (Stars)</a></li>
+                        <li><a href="#">Panchangam</a></li>
+                        <li><a href="#">Today Tithi [Moon Phase]</a></li>
+                        <li><a href="#">Rahukalam</a></li>
+                        <li><a href="#">Birth Date Astrology</a></li>
+                        <li><a href="#">Marriage Prediction</a></li>
+                        <li><a href="#">Ask Saibaba</a></li>
+                        <li><a href="#">Moon Signs</a></li>
+                        <li><a href="#">Choghadiya</a></li>
+                        <li><a href="#">Jupiter Retrograde</a></li>
+                    </ul>
+                </li>
+                <li class="has-drawer-dropdown">
+                    <a href="#" class="drawer-link">Free Tools <span class="drawer-caret"></span></a>
+                    <ul class="drawer-submenu scrollable-submenu">
+                        <li><a href="#">Love Calculator</a></li>
+                        <li><a href="#">Dasa Bhukti</a></li>
+                        <li><a href="#">Horoscope Matching</a></li>
+                        <li><a href="#">Nalla Neram</a></li>
+                        <li><a href="#">Chandrashtama</a></li>
+                        <li><a href="#">Birth Chart</a></li>
+                        <li><a href="#">Hora Watch</a></li>
+                        <li><a href="#">More Free Tools</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="drawer-link">Astrology Services</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Saturn Afflictions Banner Section -->
+    <section class="saturn-banner-section">
+        <!-- Background Image -->
+        <div class="banner-bg"></div>
+
+        <div class="banner-content-container">
+            <!-- Breadcrumb (Top Left) -->
+            <div class="breadcrumb-pill fade-in-up">
+                <a href="#">Home</a> <span class="breadcrumb-arrow">»</span> <a href="#">Free Tools</a> <span
+                    class="breadcrumb-arrow">»</span> Saturn Afflictions
+            </div>
+
+            <div class="banner-text-content">
+                <!-- Pill Badge -->
+                <div class="banner-pill-badge fade-in-up delay-1">
+                    <span class="pill-star">✦</span> FREE ASTROLOGY TOOL <span class="pill-star">✦</span>
+                </div>
+
+                <!-- Title -->
+                <div class="banner-title-wrapper fade-in-up delay-1">
+                    <h1 class="saturn-title">Saturn <span class="gold-text">Afflictions</span></h1>
+
+                    <div class="title-divider-line">
+                        <span class="star-center">✧</span>
+                    </div>
+                </div>
+
+                <!-- Subtitle -->
+                <p class="saturn-subtitle fade-in-up delay-2">
+                    Discover the impact of Saturn (Shani) in your birth chart and how it influences your life path.
+                </p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Calculator Overlapping Card -->
+    <section class="calculator-overlap-section">
+        <div class="calc-card fade-in-up delay-4">
+
+            <div class="calc-card-header">
+                <div class="user-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+
+                <div class="header-divider-wrapper">
+                    <span class="divider-dot">♦</span>
+                    <h2 class="calc-title">Enter Your Birth Details</h2>
+                    <span class="divider-dot">♦</span>
+                </div>
+                <p class="calc-subtitle">Please provide accurate birth details for precise Saturn Afflictions analysis.
+                </p>
+            </div>
+
+            <form class="saturn-calc-form">
+                <div class="form-grid">
+
+                    <!-- Date -->
+                    <div class="input-card fade-in-up delay-1">
+                        <label>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" />
+                            </svg>
+                            Birth Date
+                        </label>
+                        <div class="multi-select-group">
+                            <select>
+                                <option>Day</option>
+                            </select>
+                            <select>
+                                <option>Month</option>
+                            </select>
+                            <select>
+                                <option>Year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="input-card fade-in-up delay-2">
+                        <label>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                            Birth Time
+                        </label>
+                        <div class="multi-select-group">
+                            <select>
+                                <option>Hour</option>
+                            </select>
+                            <select>
+                                <option>Minute</option>
+                            </select>
+                            <select>
+                                <option>Second</option>
+                            </select>
+                            <select>
+                                <option>AM/PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Country -->
+                    <div class="input-card fade-in-up delay-3">
+                        <label>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            Birth Country
+                        </label>
+                        <div class="single-input-group">
+                            <select>
+                                <option>India</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="input-card fade-in-up delay-4">
+                        <label>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Birth Place / City
+                        </label>
+                        <div class="single-input-group">
+                            <input type="text" placeholder="Enter your birth place or city">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="submit-wrapper fade-in-up delay-5">
+                    <button type="button" class="saturn-submit-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                        Calculate Saturn Afflictions
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 18px; height: 18px; margin-left: 5px;">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Saturn Guidance & Remedies Section -->
+    <section class="guidance-remedies-section">
+        <div class="guidance-container">
+            <!-- Section Header -->
+            <div class="guidance-header fade-in-up">
+                <div class="guidance-title-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-star">✦</span>
+                    <div class="planet-icon-center">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="6" />
+                            <ellipse cx="12" cy="12" rx="11" ry="3" transform="rotate(-30 12 12)" />
+                        </svg>
+                    </div>
+                    <span class="divider-star">✦</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <h2 class="guidance-title">Saturn <span class="gold-text">Guidance & Remedies</span></h2>
+
+                <p class="guidance-subtitle">
+                    Personalized guidance and powerful remedies to balance Saturn's influence<br class="desktop-br"> and
+                    bring stability, peace, and growth into your life.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="guidance-cards-grid">
+
+                <!-- Card 1: Purple -->
+                <div class="guidance-card purple-theme fade-in-up delay-1">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="6" />
+                            <ellipse cx="12" cy="12" rx="11" ry="3" transform="rotate(-30 12 12)" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Saturn Transit Report</h3>
+                    <div class="card-divider"><span class="tiny-star">✦</span></div>
+                    <p class="card-desc">Understand how the current Saturn phase may influence your life.</p>
+                    <button class="card-btn">Get My Saturn Transit Report &rarr;</button>
+                </div>
+
+                <!-- Card 2: Orange -->
+                <div class="guidance-card orange-theme fade-in-up delay-2">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <polygon points="12 8 13.5 10.5 16 11 14 13 14.5 16 12 14.5 9.5 16 10 13 8 11 10.5 10.5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Saturn Challenge Remedies</h3>
+                    <div class="card-divider"><span class="tiny-star">✦</span></div>
+                    <p class="card-desc">Seek strength and relief while facing difficult Saturn influences.</p>
+                    <button class="card-btn">Ease My Saturn Challenges &rarr;</button>
+                </div>
+
+                <!-- Card 3: Blue -->
+                <div class="guidance-card blue-theme fade-in-up delay-3">
+                    <div class="card-icon-wrapper">
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21.5c0 0 5-6 5-11.5 0-2.5-2.5-4-5-4s-5 1.5-5 4c0 5.5 5 11.5 5 11.5z" />
+                            <path d="M12 21.5c0 0 8.5-4 8.5-9.5 0-2.5-2.5-4-5-4-2 0-4 1.5-4.5 3" />
+                            <path d="M12 21.5c0 0-8.5-4-8.5-9.5 0-2.5 2.5-4 5-4 2 0 4 1.5 4.5 3" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Personalized Remedies</h3>
+                    <div class="card-divider"><span class="tiny-star">✦</span></div>
+                    <p class="card-desc">Get customized remedies and guidance aligned with your unique horoscope.</p>
+                    <button class="card-btn">Explore My Remedies &rarr;</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified About & Afflictions Section -->
+    <section class="saturn-unified-section">
+        <div class="unified-container fade-in-up">
+            <!-- Decorative Corners (Top Only) -->
+            <svg class="corner-ornament corner-top-left" viewBox="0 0 40 40" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M40 0 H0 V40 M5 10 L10 5 M10 20 L20 10 M15 30 L30 15" stroke-linecap="square" />
+            </svg>
+            <svg class="corner-ornament corner-top-right" viewBox="0 0 40 40" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M40 0 H0 V40 M5 10 L10 5 M10 20 L20 10 M15 30 L30 15" stroke-linecap="square" />
+            </svg>
+
+            <!-- About Saturn Content -->
+            <div class="about-content-area">
+                <!-- Left: Astro Icon -->
+                <div class="about-icon-side">
+                    <div class="astro-symbol-wrapper">
+                        <!-- Little stars on outer ring -->
+                        <span class="ring-star s1">✦</span>
+                        <span class="ring-star s2">✦</span>
+                        <span class="ring-star s3">✦</span>
+                        <span class="ring-star s4">✦</span>
+                        <div class="astro-symbol-inner">
+                            <!-- Saturn SVG Glyph -->
+                            <svg class="saturn-glyph" viewBox="0 0 100 100" fill="currentColor">
+                                <path
+                                    d="M 40,25 L 40,75 M 25,40 L 55,40 M 40,60 C 50,45 70,50 70,65 C 70,80 55,90 45,80"
+                                    stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text Content -->
+                <div class="about-text-side">
+                    <h2 class="about-title">
+                        <span class="purple-text">Saturn</span>
+                        <span class="dash-text">&ndash;</span>
+                        <span class="gold-text">The Most Feared Planet</span>
+                    </h2>
+
+                    <div class="about-title-divider"></div>
+
+                    <ul class="about-description-list">
+                        <li>Saturn often called the planet of karma is the most dreaded planet among the Navagraha (9
+                            planets) of Vedic Astrology.</li>
+                        <li>Although everyone fears Saturn, it is a benevolent planet which rewards you based on your
+                            past
+                            and current lives.</li>
+                        <li>According to Vedic Astrology, Saturn is the slow-moving planet and spends 2.5 years in each
+                            zodiac sign.</li>
+                        <li>During its transit in a sign, it makes you undergo several turbulences for your betterment
+                            and
+                            maturity in life.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Unified Divider -->
+            <div class="unified-divider">
+                <span class="divider-diamond">✦</span>
+            </div>
+
+            <!-- Saturn Afflictions Content -->
+            <div class="afflictions-content-area">
+                <!-- Top Row: Intro & Quote -->
+                <div class="afflictions-top-row">
+                    <!-- Left: Intro Text -->
+                    <div class="afflictions-intro fade-in-up">
+                        <div class="afflictions-intro-header">
+                            <div class="affliction-crest">
+                                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4"
+                                    stroke-linejoin="round">
+                                    <circle cx="50" cy="50" r="42" stroke-width="3" />
+                                    <path d="M50 20 L72 28 L80 50 L72 72 L50 80 L28 72 L20 50 L28 28 Z"
+                                        stroke-width="3" />
+                                    <path d="M50 32 L63 37 L68 50 L63 63 L50 68 L37 63 L32 50 L37 37 Z"
+                                        stroke-width="2" />
+                                    <circle cx="50" cy="50" r="8" stroke-width="4" />
+                                    <circle cx="50" cy="50" r="3" fill="currentColor" stroke="none" />
+                                </svg>
+                            </div>
+                            <h2>
+                                <span class="purple-text">Saturn</span>
+                                <span class="gold-text">Afflictions in Birth Chart</span>
+                            </h2>
+                        </div>
+                        <p>The impact of Saturn is high, when it transits 12th, 1st, and 2nd house (Sade Sati), 4th
+                            house
+                            (Artha Ashtama Sani), and 8th house (Ashtama Sani) from the Moon in your birth chart. The
+                            position of Saturn in these houses can result in malefic effects and may make you undergo
+                            many
+                            hardships in life, only to impart patience, maturity, discipline, and hard work.</p>
+                    </div>
+
+                    <!-- Right: Quote Box -->
+                    <div class="afflictions-quote-box fade-in-up delay-1">
+                        <p>
+                            <span class="quote-mark start">&ldquo;</span>
+                            The impact of Saturn is intense in these positions and can teach you tough lessons and help
+                            you
+                            lead a better life. The effects of Sade Sati is malefic, though not as malefic as Ashtama
+                            and
+                            Artha Ashtama Sani.
+                            <span class="quote-mark end">&rdquo;</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vertical Timeline -->
+                <div class="afflictions-timeline">
+                    <div class="timeline-line"></div>
+
+                    <!-- Item 1: Sade Sati -->
+                    <div class="timeline-item fade-in-up delay-2">
+                        <div class="timeline-number">01</div>
+                        <div class="timeline-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="13" r="8"></circle>
+                                <polyline points="12 9 12 13 14 15"></polyline>
+                                <path d="M5 3L2 6"></path>
+                                <path d="M19 3l3 3"></path>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Sade Sati</h3>
+                                <div class="timeline-divider"></div>
+                            </div>
+                            <p>Sade Sati denotes the 7½ year period of Saturn from your natal Moon. During this period,
+                                Saturn may pose you several trials and tribulations to dissolve your ego and teach
+                                lessons
+                                based on your karma. This period is divided into 3 phases based on the position of
+                                Saturn in
+                                12th, 1st, or 2nd house from the Moon in your birth chart.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Ashtama Sani -->
+                    <div class="timeline-item fade-in-up delay-3">
+                        <div class="timeline-number">02</div>
+                        <div class="timeline-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M12 8v8"></path>
+                                <path d="M8 12h8"></path>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Ashtama Sani</h3>
+                                <div class="timeline-divider"></div>
+                            </div>
+                            <p>Ashtama Sani denotes the transit of Saturn in the 8th house from your natal Moon. The
+                                2.5-year period of Saturn in this position can cause health issues, financial
+                                constraints,
+                                obstacles in career, dangers, sudden losses, high expenditure, worry due to children,
+                                and
+                                unexpected quarrels/separation from family or friends.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Artha Ashtama Sani -->
+                    <div class="timeline-item fade-in-up delay-4">
+                        <div class="timeline-number">03</div>
+                        <div class="timeline-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <path d="M4 14l3.5-3.5 3 3 4.5-4.5"></path>
+                                <path d="M15 9v5h-5"></path>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Artha Ashtama Sani</h3>
+                                <div class="timeline-divider"></div>
+                            </div>
+                            <p>Artha Ashtama Sani denotes the transit of Saturn in the 4th house from your natal Moon.
+                                During these 2.5 years, Saturn can give you many challenges and disturb domestic
+                                harmony.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Banner -->
+                <div class="afflictions-footer-banner fade-in-up">
+                    <div class="banner-icon-left">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <p class="banner-text">Remember, Saturn's challenges are not punishments, but powerful opportunities
+                        to
+                        grow, become stronger, and build a better tomorrow.</p>
+                    <div class="banner-icon-right">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="8"></circle>
+                            <ellipse cx="12" cy="12" rx="12" ry="4" transform="rotate(-20 12 12)"></ellipse>
+                        </svg>
+                    </div>
+                </div>
+            </div> <!-- end afflictions-content-area -->
+        </div> <!-- end unified-container -->
+    </section>
+
+    <!-- Why Choose Section (New horizontal layout) -->
+    <section class="saturn-why-choose-section">
+        <div class="why-choose-container">
+            <!-- Header -->
+            <div class="why-choose-header fade-in-up">
+                <div class="why-choose-subtitle-wrap">
+                    <span class="wc-line"></span>
+                    <span class="wc-diamond"></span>
+                    <span class="why-choose-subtitle">Why Choose</span>
+                    <span class="wc-diamond"></span>
+                    <span class="wc-line"></span>
+                </div>
+                <h2 class="why-choose-title">
+                    Saturn <span class="gold-text">Guidance?</span>
+                </h2>
+                <p class="why-choose-desc">
+                    Saturn's wisdom helps you transform life's challenges into growth<br>
+                    and brings clarity, balance and strength to create a better tomorrow.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="why-choose-grid-wrapper">
+                <!-- Background connecting line -->
+                <div class="why-choose-connecting-line">
+                    <div class="connector-diamond d1"></div>
+                    <div class="connector-diamond d2"></div>
+                    <div class="connector-diamond d3"></div>
+                    <div class="connector-diamond d4"></div>
+                    <div class="connector-diamond d5"></div>
+                </div>
+
+                <div class="why-choose-grid">
+                    <!-- Card 1 -->
+                    <div class="why-choose-card fade-in-up delay-1">
+                        <div class="wc-card-icon">
+                            <!-- Target icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="8"/>
+                                <circle cx="12" cy="12" r="3"/>
+                                <line x1="12" y1="2" x2="12" y2="22"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 class="wc-card-title">Accurate<br>Insights</h3>
+                        <div class="wc-card-divider"></div>
+                        <p class="wc-card-text">In-depth analysis of Saturn's position in your birth chart and its impact on your life path.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="why-choose-card fade-in-up delay-2">
+                        <div class="wc-card-icon">
+                            <!-- Flag winding icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M7 22V6M7 6l10 4-10 4"/>
+                                <path d="M4 22h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="wc-card-title">Overcome<br>Challenges</h3>
+                        <div class="wc-card-divider"></div>
+                        <p class="wc-card-text">Understand the root causes of delays, obstacles and hardships and find clear ways to overcome them.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="why-choose-card fade-in-up delay-3">
+                        <div class="wc-card-icon">
+                            <!-- Meditator icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="6" r="2.5"/>
+                                <path d="M6 18c0-3 2.5-6 6-6s6 3 6 6"/>
+                                <line x1="12" y1="12" x2="12" y2="15"/>
+                            </svg>
+                        </div>
+                        <h3 class="wc-card-title">Personalized<br>Remedies</h3>
+                        <div class="wc-card-divider"></div>
+                        <p class="wc-card-text">Get customized Vedic remedies, mantras and practical solutions to reduce malefic effects and invite blessings.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="why-choose-card fade-in-up delay-4">
+                        <div class="wc-card-icon">
+                            <!-- Chart arrow icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="15" width="4" height="6"/>
+                                <rect x="10" y="9" width="4" height="12"/>
+                                <rect x="17" y="3" width="4" height="18"/>
+                                <polyline points="4 9 10 5 16 8 22 2"/>
+                                <polyline points="18 2 22 2 22 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="wc-card-title">Growth &<br>Stability</h3>
+                        <div class="wc-card-divider"></div>
+                        <p class="wc-card-text">Align with Saturn's energy to build patience, discipline and consistency for long-term success and stability.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="why-choose-card fade-in-up delay-5">
+                        <div class="wc-card-icon">
+                            <!-- Scales icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="12" y1="3" x2="12" y2="21"/>
+                                <path d="M12 5l-7 4 7 4 7-4-7-4z"/>
+                                <line x1="5" y1="9" x2="5" y2="15"/>
+                                <line x1="19" y1="9" x2="19" y2="15"/>
+                                <line x1="3" y1="21" x2="21" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3 class="wc-card-title">Karmic<br>Balance</h3>
+                        <div class="wc-card-divider"></div>
+                        <p class="wc-card-text">Balance past karma, make better decisions and create a more harmonious and purposeful life.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="why-choose-card fade-in-up delay-6">
+                        <div class="wc-card-icon">
+                            <!-- Heart with sparkle icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                <path d="M15 8l1.5 -1.5m0 0l1.5 -1.5m-1.5 1.5l-1.5 -1.5m1.5 1.5l1.5 1.5" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="wc-card-title">Peace of<br>Mind</h3>
+                        <div class="wc-card-divider"></div>
+                        <p class="wc-card-text">Gain clarity, confidence and peace of mind knowing you are on the right path.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="saturn-faq-section">
+        <div class="faq-bg-ornament top-left"></div>
+        <div class="faq-bg-ornament bottom-right"></div>
+
+        <div class="faq-container">
+            <!-- Header -->
+            <div class="faq-header fade-in-up">
+                <div class="faq-subtitle">
+                    <span class="faq-line"></span>
+                    <span class="faq-subtitle-text">FAQ</span>
+                    <span class="faq-line"></span>
+                </div>
+                <h2 class="faq-title">
+                    <span class="purple-text">Frequently Asked</span> <span class="gold-text">Questions</span>
+                </h2>
+                <div class="faq-floral-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C12 2 15 7 15 11C15 15 12 18 12 18C12 18 9 15 9 11C9 7 12 2 12 2Z"
+                            opacity="0.8" />
+                        <path d="M12 22C12 22 15 17 15 13C15 9 12 6 12 6C12 6 9 9 9 13C9 17 12 22 12 22Z"
+                            opacity="0.8" />
+                        <path d="M22 12C22 12 17 15 13 15C9 15 6 12 6 12C6 12 9 9 13 9C17 9 22 12 22 12Z"
+                            opacity="0.6" />
+                        <path d="M2 12C2 12 7 9 11 9C15 9 18 12 18 12C18 12 15 15 11 15C7 15 2 12 2 12Z"
+                            opacity="0.6" />
+                    </svg>
+                </div>
+                <p class="faq-description">Find answers to common questions about Saturn, its effects and remedies.</p>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="faq-list">
+
+                <!-- FAQ Item 1 -->
+                <div class="faq-item fade-in-up delay-1">
+                    <div class="faq-icon-container">
+                        <div class="faq-icon-circle">
+                            <span class="faq-icon-star">✦</span>
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <path
+                                    d="M 40,25 L 40,75 M 25,40 L 55,40 M 40,55 C 45,45 65,45 65,65 C 65,80 50,85 45,75"
+                                    stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-vertical-divider"></div>
+                    <div class="faq-text-content">
+                        <h3 class="faq-question">What is Saturn and why is it important in astrology?</h3>
+                        <div class="faq-answer">
+                            <p>Saturn (Shani) is the planet of karma, discipline and justice. It teaches valuable life
+                                lessons and shapes our character through challenges and responsibilities.</p>
+                        </div>
+                    </div>
+                    <div class="faq-toggle-container">
+                        <button class="faq-toggle-btn">
+                            <svg class="icon-plus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <svg class="icon-minus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M5 12h14" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item fade-in-up delay-2">
+                    <div class="faq-icon-container">
+                        <div class="faq-icon-circle">
+                            <span class="faq-icon-star">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9" />
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 3v6M12 15v6M3 12h6M15 12h6" />
+                                <path d="M5.5 5.5l4 4M14.5 14.5l4 4M18.5 5.5l-4 4M9.5 14.5l-4 4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-vertical-divider"></div>
+                    <div class="faq-text-content">
+                        <h3 class="faq-question">How long does Saturn take to complete one zodiac sign?</h3>
+                        <div class="faq-answer">
+                            <p>Saturn is a slow-moving planet and spends about 2.5 years in each zodiac sign.</p>
+                        </div>
+                    </div>
+                    <div class="faq-toggle-container">
+                        <button class="faq-toggle-btn">
+                            <svg class="icon-plus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <svg class="icon-minus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M5 12h14" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item fade-in-up delay-3">
+                    <div class="faq-icon-container">
+                        <div class="faq-icon-circle">
+                            <span class="faq-icon-star">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M6 3h12M6 21h12M7 3l4.5 8.5C12 12.5 12 12.5 12 12.5s0 0 .5-1L17 3M7 21l4.5-8.5C12 11.5 12 11.5 12 11.5s0 0 .5 1L17 21" />
+                                <path d="M10 16h4M11 7h2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-vertical-divider"></div>
+                    <div class="faq-text-content">
+                        <h3 class="faq-question">What are the challenging periods of Saturn transit?</h3>
+                        <div class="faq-answer">
+                            <p>The main challenging periods are Sade Sati (7½ years), Ashtama Sani (2.5 years) and Artha
+                                Ashtama Sani (2.5 years). These periods bring tests and lessons based on karma.</p>
+                        </div>
+                    </div>
+                    <div class="faq-toggle-container">
+                        <button class="faq-toggle-btn">
+                            <svg class="icon-plus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <svg class="icon-minus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M5 12h14" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item fade-in-up delay-4">
+                    <div class="faq-icon-container">
+                        <div class="faq-icon-circle">
+                            <span class="faq-icon-star">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <!-- Hovering Star -->
+                                <polygon points="12 4 13 7 16 7 13.5 9 14.5 12 12 10 9.5 12 10.5 9 8 7 11 7" />
+                                <!-- Open Palm -->
+                                <path d="M7 15h-3a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h3" />
+                                <path d="M7 15l4-4 2 2 6-2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2l-10 4h-3" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-vertical-divider"></div>
+                    <div class="faq-text-content">
+                        <h3 class="faq-question">Can the malefic effects of Saturn be reduced?</h3>
+                        <div class="faq-answer">
+                            <p>Yes. With the right remedies, disciplined efforts, charity, prayers and positive actions,
+                                the challenging effects of Saturn can be reduced.</p>
+                        </div>
+                    </div>
+                    <div class="faq-toggle-container">
+                        <button class="faq-toggle-btn">
+                            <svg class="icon-plus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <svg class="icon-minus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M5 12h14" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item fade-in-up delay-5">
+                    <div class="faq-icon-container">
+                        <div class="faq-icon-circle">
+                            <span class="faq-icon-star">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-vertical-divider"></div>
+                    <div class="faq-text-content">
+                        <h3 class="faq-question">Is Saturn always harmful?</h3>
+                        <div class="faq-answer">
+                            <p>No. Saturn is not always harmful. It brings stability, maturity, success and long-term
+                                growth when it is well-placed in a birth chart.</p>
+                        </div>
+                    </div>
+                    <div class="faq-toggle-container">
+                        <button class="faq-toggle-btn">
+                            <svg class="icon-plus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <svg class="icon-minus" viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M5 12h14" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

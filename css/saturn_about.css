@@ -1,0 +1,651 @@
+/* ==========================================================================
+   Saturn About Section Styles
+   ========================================================================== */
+
+.saturn-unified-section {
+    padding: 30px 20px 20px 20px; /* Reduced top and bottom padding to close gaps */
+    background-color: #fcfbf9;
+    /* Very light beige page background */
+    display: flex;
+    justify-content: center;
+}
+
+.unified-container {
+    max-width: 1100px;
+    width: 100%;
+    background-color: #ffffff;
+    /* Pure white unified inner container */
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* Subtle gold border */
+    padding: 30px 40px 40px 40px; /* Slightly reduced top padding */
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.about-content-area {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Unified Section Divider */
+.unified-divider {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0) 0%, rgba(212, 175, 55, 0.6) 50%, rgba(212, 175, 55, 0) 100%);
+    margin: 50px 0;
+    /* Space between the two sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-diamond {
+    color: #d4af37;
+    font-size: 18px;
+    background: #ffffff;
+    padding: 0 10px;
+    line-height: 0;
+}
+
+/* --- Corner Ornaments --- */
+.corner-ornament {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    color: #d4af37;
+    /* Gold fill/stroke */
+}
+
+.corner-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.corner-top-right {
+    top: 10px;
+    right: 10px;
+    transform: scaleX(-1);
+}
+
+.corner-bottom-left {
+    bottom: 10px;
+    left: 10px;
+    transform: scaleY(-1);
+}
+
+.corner-bottom-right {
+    bottom: 10px;
+    right: 10px;
+    transform: scale(-1, -1);
+}
+
+/* --- Left Side: Astro Icon --- */
+.about-icon-side {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.astro-symbol-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.astro-symbol-inner {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px dashed rgba(212, 175, 55, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+/* The expanding rays */
+.astro-symbol-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    background: repeating-conic-gradient(from 7.5deg,
+            transparent 0deg 15deg,
+            #f6eedc 15deg 30deg);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Tiny stars on the outer ring */
+.ring-star {
+    position: absolute;
+    color: #d4af37;
+    font-size: 14px;
+}
+
+.ring-star.s1 {
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ring-star.s2 {
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ring-star.s3 {
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ring-star.s4 {
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.saturn-glyph {
+    width: 50px;
+    height: 50px;
+    color: #4a2176;
+    /* Dark purple */
+}
+
+/* --- Right Side: Text Content --- */
+.about-text-side {
+    flex-grow: 1;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.about-title .purple-text {
+    color: #3b1766;
+}
+
+.about-title .dash-text {
+    color: #b38548;
+}
+
+.about-title .gold-text {
+    color: #b38548;
+    /* Earthy gold */
+}
+
+.about-title-divider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.6) 0%, rgba(212, 175, 55, 0) 100%);
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.about-description-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-description-list li {
+    font-size: 15px;
+    color: #1e293b;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-description-list li:last-child {
+    margin-bottom: 0;
+}
+
+.about-description-list li::before {
+    content: '•';
+    color: #d4af37; /* Gold bullet point */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 991px) {
+    .unified-container {
+        padding: 40px 20px;
+    }
+
+    .about-content-area {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-title-divider {
+        background: linear-gradient(90deg, rgba(212, 175, 55, 0) 0%, rgba(212, 175, 55, 0.6) 50%, rgba(212, 175, 55, 0) 100%);
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .saturn-about-section {
+        padding: 40px 15px;
+    }
+
+    .about-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .about-description p {
+        font-size: 14px;
+    }
+
+    .astro-symbol-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .astro-symbol-inner {
+        width: 90px;
+        height: 90px;
+    }
+
+    .saturn-glyph {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ==========================================================================
+   Saturn Afflictions Section Styles
+   ========================================================================== */
+
+.afflictions-content-area {
+    width: 100%;
+}
+
+/* --- Top Row: Intro & Quote --- */
+.afflictions-top-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.afflictions-intro {
+    flex: 1.5; /* Takes up more space (approx 60%) to match reference */
+}
+
+.afflictions-intro-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.affliction-crest {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f7f1fc;
+    border: 1px solid rgba(74, 33, 118, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.affliction-crest svg {
+    width: 35px;
+    height: 35px;
+    color: #4a2176;
+}
+
+.afflictions-intro-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    /* Reduced from 30px to fit on one line perfectly */
+    margin: 0;
+}
+
+.afflictions-intro-header h2 .purple-text {
+    color: #3b1766;
+}
+
+.afflictions-intro-header h2 .gold-text {
+    color: #b38548;
+}
+
+.afflictions-intro p {
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Quote Box --- */
+.afflictions-quote-box {
+    flex: 1; /* Takes up less space (approx 40%) to match reference */
+    background-color: #d4c0e6; /* Outer border color */
+    padding: 25px 35px; /* Tighter padding for a compact look */
+    position: relative;
+    clip-path: polygon(
+        15px 0, calc(100% - 15px) 0,
+        100% 15px, 100% calc(100% - 15px),
+        calc(100% - 15px) 100%, 15px 100%,
+        0 calc(100% - 15px), 0 15px
+    );
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.afflictions-quote-box::before {
+    content: '';
+    position: absolute;
+    top: 1px; left: 1px; right: 1px; bottom: 1px; /* Creates the 1px border */
+    background-color: #f6eff9; /* Light purple inner background */
+    clip-path: polygon(
+        14.5px 0, calc(100% - 14.5px) 0,
+        100% 14.5px, 100% calc(100% - 14.5px),
+        calc(100% - 14.5px) 100%, 14.5px 100%,
+        0 calc(100% - 14.5px), 0 14.5px
+    );
+    z-index: 0;
+}
+
+.afflictions-quote-box p {
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    color: #1e293b;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.quote-mark {
+    font-family: 'Georgia', serif;
+    font-size: 40px;
+    color: #d4af37;
+    line-height: 1;
+}
+
+.quote-mark.start {
+    float: left;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.quote-mark.end {
+    float: right;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+
+/* --- Timeline Section --- */
+.afflictions-timeline {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+/* The vertical dashed line */
+.timeline-line {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 34px;
+    /* Center of the number circles */
+    width: 1px;
+    border-left: 2px dashed rgba(212, 175, 55, 0.5);
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Left: Number */
+.timeline-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4a2176;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 15px;
+    box-shadow: 0 0 0 4px #fcfbf9;
+    /* creates gap over the dashed line */
+}
+
+/* Middle: Icon */
+.timeline-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(74, 33, 118, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-icon-box svg {
+    width: 30px;
+    height: 30px;
+    color: #4a2176;
+}
+
+/* Right: Content */
+.timeline-content {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.timeline-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #3b1766;
+    margin: 0;
+}
+
+.timeline-divider {
+    height: 1px;
+    flex-grow: 1;
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.6) 0%, rgba(212, 175, 55, 0) 100%);
+    position: relative;
+    max-width: 200px;
+}
+
+.timeline-divider::before {
+    content: '✦';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #d4af37;
+    font-size: 10px;
+    background: #fcfbf9;
+    padding: 0 5px;
+}
+
+.timeline-content p {
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Footer Banner --- */
+.afflictions-footer-banner {
+    background-color: #f7f1fc;
+    border: 1px solid rgba(74, 33, 118, 0.1);
+    border-radius: 12px;
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-icon-left {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.banner-icon-left svg {
+    width: 25px;
+    height: 25px;
+    color: #4a2176;
+}
+
+.banner-text {
+    flex: 1;
+    font-size: 16px;
+    color: #4a2176;
+    margin: 0;
+    font-weight: 500;
+}
+
+.banner-icon-right {
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.banner-icon-right svg {
+    width: 150px;
+    height: 150px;
+    color: #4a2176;
+}
+
+/* --- Animations --- */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 991px) {
+    .afflictions-top-row {
+        flex-direction: column;
+    }
+
+    .timeline-divider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .saturn-afflictions-section {
+        padding: 40px 15px;
+    }
+
+    .timeline-item {
+        gap: 15px;
+    }
+
+    .timeline-number {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .timeline-line {
+        left: 31.5px;
+    }
+
+    .timeline-icon-box {
+        width: 45px;
+        height: 45px;
+    }
+
+    .timeline-icon-box svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-header h3 {
+        font-size: 18px;
+    }
+
+    .afflictions-footer-banner {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text {
+        font-size: 14px;
+    }
+
+    .banner-icon-right {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -50px;
+    }
+}

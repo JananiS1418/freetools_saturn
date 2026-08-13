@@ -1,0 +1,715 @@
+/* ==========================================================================
+   Saturn Afflictions Banner & Premium Calculator Styles
+   ========================================================================== */
+
+.saturn-banner-section {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 20px 140px 20px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #0b0c10;
+}
+
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/banner.png');
+    background-size: 100% 100%; /* Restored to ensure both the left (Deity) and right (Planet) sides are always fully visible */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.banner-content-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1140px;
+    /* Widened from 900px to push breadcrumb further left */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* --- Breadcrumb Pill (Like Manglik Page) --- */
+.breadcrumb-pill {
+    align-self: flex-start;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #1e293b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumb-pill a {
+    color: #4c1d95;
+    /* Deep purple like the Manglik link color */
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+    font-weight: 600;
+}
+
+.breadcrumb-pill a:hover {
+    color: #7c3aed;
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
+}
+
+.breadcrumb-arrow {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* --- Typography & Elements --- */
+
+.banner-pill-badge {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
+    color: #4338ca;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 8px 24px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    /* Subtle gold border */
+}
+
+.pill-star {
+    color: #f59e0b;
+    /* Brighter gold */
+    font-size: 15px;
+    display: inline-block;
+    animation: twinkle 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2) rotate(15deg);
+    }
+}
+
+.banner-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    /* Removed bottom margin to balance spacing with the subtitle */
+}
+
+.saturn-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #0f172a;
+    /* Deep navy blue for high contrast */
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+    /* Soft white glow to separate from background */
+}
+
+.saturn-title .gold-text {
+    background: linear-gradient(to right, #b45309 0%, #d97706 50%, #92400e 100%);
+    /* Deeper, richer gold for light backgrounds */
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    animation: goldShine 3s linear infinite;
+    text-shadow: none;
+    /* Removed shadow to keep it crisp */
+}
+
+@keyframes goldShine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.title-divider-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 15px auto;
+}
+
+.title-divider-line::before,
+.title-divider-line::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, rgba(180, 83, 9, 0) 0%, rgba(180, 83, 9, 0.8) 50%, rgba(180, 83, 9, 0) 100%);
+}
+
+.star-center {
+    color: #b45309;
+    /* Deeper, richer gold for visibility */
+    font-size: 18px;
+    margin: 0 15px;
+    display: inline-block;
+    animation: twinkle 2s ease-in-out infinite alternate-reverse;
+}
+
+.saturn-subtitle {
+    font-size: 20px;
+    color: #1e293b;
+    /* Deep slate gray for readability */
+    max-width: 650px;
+    line-height: 1.6;
+    margin: 5px auto 40px auto;
+    /* Reduced top margin to 5px so total gap matches above divider (15px + 5px = 20px) */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+    /* Subtle white glow instead of black shadow */
+    font-weight: 600;
+    /* Bolder for visibility */
+    letter-spacing: 0.5px;
+}
+
+/* --- Features Grid (Neater layout) --- */
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Subtle separator lines between features */
+.feature-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-icon svg {
+    width: 22px;
+    height: 22px;
+    color: #d4af37;
+}
+
+.feature-text {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* --- Curve Overlay --- */
+.banner-curve-overlay {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.banner-curve-overlay svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   Calculator Overlap Section
+   ========================================================================== */
+
+.calculator-overlap-section {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: -120px;
+    /* Increased to pull form up further over the banner */
+    background-color: transparent;
+    padding-bottom: 20px;
+    /* Reduced to pull the next section closer */
+}
+
+.calc-card {
+    background-color: #fdfcf5;
+    /* Creamy beige to match Manglik */
+    max-width: 900px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    position: relative;
+}
+
+.calc-card-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.user-icon-badge {
+    width: 44px;
+    height: 44px;
+    background-color: #f3f0ff;
+    /* Light purple */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -62px auto 20px auto;
+    box-shadow: none;
+    border: none;
+}
+
+.user-icon-badge svg {
+    width: 20px;
+    height: 20px;
+    color: #8b5cf6;
+    /* Vibrant purple */
+}
+
+.header-divider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divider-dot {
+    color: #cbd5e1;
+    font-size: 10px;
+}
+
+.calc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 700;
+}
+
+.calc-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.highlight {
+    color: #4338ca;
+    font-weight: 600;
+}
+
+/* --- Form Elements --- */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.input-card {
+    background-color: #ffffff;
+    border: 1px solid #f1efe4;
+    /* Soft beige border */
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.input-card:hover {
+    border-color: #f59e0b;
+    /* Yellow/orange border on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
+    /* Warm glow */
+}
+
+.input-card label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 12px;
+}
+
+.input-card label svg {
+    width: 16px;
+    height: 16px;
+    color: #8b5cf6;
+    /* Vibrant purple */
+}
+
+.multi-select-group {
+    display: flex;
+    gap: 6px;
+    /* Reduced gap */
+}
+
+.single-input-group,
+.multi-select-group select,
+.single-input-group input,
+.single-input-group select {
+    width: 100%;
+}
+
+.multi-select-group select,
+.single-input-group select,
+.single-input-group input {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px 10px;
+    /* Reduced padding to fit text */
+    font-size: 13px;
+    border: 1px solid #e8e6d9;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+    text-overflow: ellipsis;
+}
+
+/* Custom Dropdown Arrow */
+.multi-select-group select,
+.single-input-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23d4af37'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+    padding-right: 22px;
+    /* Reduced right padding */
+}
+
+.multi-select-group select:focus,
+.single-input-group select:focus,
+.single-input-group input:focus {
+    border-color: #f59e0b;
+    /* Yellowish border on focus */
+}
+
+.submit-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.saturn-submit-btn {
+    background: linear-gradient(135deg, #ff8a00 0%, #e52e71 100%);
+    /* Premium gradient like Manglik */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(229, 46, 113, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine effect on button */
+.saturn-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 200%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}
+
+.saturn-submit-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(229, 46, 113, 0.5);
+    background: linear-gradient(135deg, #ff9b26 0%, #f43f5e 100%);
+}
+
+.btn-icon {
+    color: #ffeed3;
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 991px) {
+    .saturn-banner-section {
+        padding: 30px 20px 120px 20px; /* Deep bottom padding to clear the user icon overlap */
+        aspect-ratio: 16 / 9;
+        /* Force container to match the exact proportions of the image */
+        min-height: auto;
+    }
+
+    .banner-bg {
+        background-image: url('../images/banner-tab.png');
+        background-size: 100% 100%;
+        /* Because container is perfectly proportional, this prevents any clipping */
+        background-position: center;
+    }
+
+    .banner-content-container {
+        flex: 1;
+        /* Stretch to fill banner height */
+        align-items: flex-end;
+        /* Push items to the right edge */
+    }
+
+    .banner-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 42%; /* Reduced to pull the text block further right and clear the wing */
+        margin-right: 2%; /* Add a tiny margin to keep it off the extreme right edge */
+        margin-top: auto;
+        /* Vertically center in the available space */
+        margin-bottom: auto;
+        /* Vertically center */
+        text-align: center;
+    }
+
+    .banner-pill-badge {
+        display: inline-flex;
+    }
+
+    .banner-title-wrapper {
+        align-items: center;
+    }
+
+    .saturn-title {
+        font-size: 32px; /* Reduced to ensure it fits on a single line within the 42% width */
+        text-align: center;
+        white-space: nowrap; /* Force single line display */
+    }
+
+    .title-divider-line {
+        margin: 15px auto;
+        max-width: 250px;
+    }
+
+    .saturn-subtitle {
+        margin: 10px 0 35px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .calculator-overlap-section {
+        margin-top: -30px;
+        /* Reduced overlap so it doesn't cover the crow */
+    }
+}
+
+@media (max-width: 767px) {
+    .saturn-banner-section {
+        padding: 20px 15px 100px 15px; /* Safely accommodates the increased form overlap */
+        min-height: 360px; /* Slightly reduced height as requested */
+    }
+
+    .banner-bg {
+        background-image: url('../images/banner-mobile.png');
+        background-size: cover; /* Absolutely guarantees no black gaps */
+        background-position: left top; /* Pins the deity in view and protects the top composition */
+    }
+
+    .banner-content-container {
+        flex: 1;
+        align-items: flex-end;
+    }
+
+    .banner-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Internal center alignment */
+        width: 52%; /* Keep it tight on the right side */
+        margin-right: 0;
+        margin-top: auto; /* Vertically center */
+        margin-bottom: auto; /* Vertically center */
+        text-align: center;
+    }
+
+    .banner-pill-badge {
+        padding: 4px 10px;
+        font-size: 8px; /* Further reduced text size */
+        margin-bottom: 8px;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .banner-title-wrapper {
+        align-items: center;
+    }
+
+    .saturn-title {
+        font-size: 19px; /* Further reduced text size */
+        text-align: center;
+    }
+
+    .title-divider-line {
+        margin: 5px auto;
+        max-width: 100px;
+    }
+
+    .saturn-subtitle {
+        font-size: 11px; /* Further reduced text size */
+        margin: 4px 0 10px 0;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .breadcrumb-pill {
+        margin-top: -5px;
+        margin-bottom: 15px;
+        align-self: flex-start;
+        /* Keep breadcrumb on top left */
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .calc-card {
+        padding: 25px 20px;
+    }
+
+    .user-icon-badge {
+        margin: -48px auto 15px auto;
+    }
+
+    .saturn-submit-btn {
+        padding: 14px 24px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .calculator-overlap-section {
+        margin-top: -45px; /* Increased the overlap upward slightly */
+        position: relative;
+        z-index: 5;
+    }
+}
