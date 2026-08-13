@@ -231,9 +231,9 @@
 
 @media (max-width: 767px) {
     .why-choose-grid {
-        grid-template-columns: 1fr;
-        max-width: 350px;
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* Slightly tighter gap for mobile */
+        max-width: 100%; /* Allow full width to fit 2 cards */
     }
     .why-choose-header { margin-bottom: 40px; }
     .why-choose-title { font-size: 28px; }

@@ -191,16 +191,19 @@
 /* Text Content */
 .faq-text-content {
     flex-grow: 1;
-    padding-top: 18px; /* Perfectly centers text with the icon */
+    padding-top: 0; /* Removed fixed padding to fix multi-line misalignment */
 }
 
 .faq-question {
-    margin: 0 0 8px 0;
+    margin: 0; /* Removed bottom margin, space handled by min-height/answer */
     font-size: 18px;
     font-weight: 600;
     color: #3b1766;
     line-height: 1.4;
     transition: color 0.3s ease;
+    min-height: 60px; /* Match icon height */
+    display: flex;
+    align-items: center; /* Perfectly vertically center text within the 60px height */
 }
 
 .faq-answer {
@@ -298,22 +301,41 @@
     }
     
     .faq-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .faq-icon-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .faq-icon-circle svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .faq-text-content {
+        padding-top: 0; 
+    }
+
+    .faq-question {
+        font-size: 15px;
+        padding-right: 30px; /* Space for the toggle button */
+        min-height: 45px; /* Match mobile icon height */
+    }
+
+    .faq-toggle-container {
+        position: absolute;
+        top: 19px; /* Exact center alignment with 45px icon in a 15px padded box */
+        right: 15px;
+        padding-top: 0;
     }
     
     .faq-vertical-divider {
-        width: 100%;
-        height: 1px;
-        margin: 5px 0;
-        background: linear-gradient(to right, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.5), rgba(212, 175, 55, 0.1));
-    }
-    
-    .faq-toggle-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        display: none; /* Hide divider on mobile to save space */
     }
 }

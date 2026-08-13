@@ -23,7 +23,8 @@
     width: 100%;
     height: 100%;
     background-image: url('../images/banner.png');
-    background-size: 100% 100%; /* Restored to ensure both the left (Deity) and right (Planet) sides are always fully visible */
+    background-size: 100% 100%;
+    /* Restored to ensure both the left (Deity) and right (Planet) sides are always fully visible */
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
@@ -558,7 +559,8 @@
 
 @media (max-width: 991px) {
     .saturn-banner-section {
-        padding: 30px 20px 120px 20px; /* Deep bottom padding to clear the user icon overlap */
+        padding: 30px 20px 120px 20px;
+        /* Deep bottom padding to clear the user icon overlap */
         aspect-ratio: 16 / 9;
         /* Force container to match the exact proportions of the image */
         min-height: auto;
@@ -582,8 +584,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 42%; /* Reduced to pull the text block further right and clear the wing */
-        margin-right: 2%; /* Add a tiny margin to keep it off the extreme right edge */
+        width: 42%;
+        /* Reduced to pull the text block further right and clear the wing */
+        margin-right: 2%;
+        /* Add a tiny margin to keep it off the extreme right edge */
         margin-top: auto;
         /* Vertically center in the available space */
         margin-bottom: auto;
@@ -600,9 +604,11 @@
     }
 
     .saturn-title {
-        font-size: 32px; /* Reduced to ensure it fits on a single line within the 42% width */
+        font-size: 32px;
+        /* Reduced to ensure it fits on a single line within the 42% width */
         text-align: center;
-        white-space: nowrap; /* Force single line display */
+        white-space: nowrap;
+        /* Force single line display */
     }
 
     .title-divider-line {
@@ -622,16 +628,70 @@
     }
 }
 
+/* --- Exact Tablet Form Matching (Only Tablet) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+    .saturn-submit-btn {
+        padding: 16px 30px;
+        font-size: 16px;
+        background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+        border-radius: 10px;
+    }
+
+    .input-card label svg {
+        background-color: #f3f0ff;
+        padding: 5px;
+        border-radius: 6px;
+        width: 26px;
+        height: 26px;
+        box-sizing: border-box;
+    }
+
+    .input-card label {
+        color: #4338ca;
+        font-weight: 700;
+    }
+
+    .multi-select-group {
+        gap: 3px;
+    }
+
+    .multi-select-group select,
+    .single-input-group select,
+    .single-input-group input {
+        border-radius: 12px;
+        padding: 8px 2px 8px 4px;
+        /* Extremely tight padding to fit text */
+        font-size: 11px;
+        /* Smaller font to ensure 'Minute' and 'Second' fit */
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        /* Pull text in slightly */
+    }
+
+    .multi-select-group select {
+        padding-right: 14px;
+        /* Minimal room for the dropdown arrow */
+        background-position: right 2px center;
+        /* Move arrow very close to the edge */
+        background-size: 9px;
+        /* Smaller arrow */
+    }
+}
+
 @media (max-width: 767px) {
     .saturn-banner-section {
-        padding: 20px 15px 100px 15px; /* Safely accommodates the increased form overlap */
-        min-height: 360px; /* Slightly reduced height as requested */
+        padding: 20px 15px 100px 15px;
+        /* Safely accommodates the increased form overlap */
+        min-height: 360px;
+        /* Slightly reduced height as requested */
     }
 
     .banner-bg {
         background-image: url('../images/banner-mobile.png');
-        background-size: cover; /* Absolutely guarantees no black gaps */
-        background-position: left top; /* Pins the deity in view and protects the top composition */
+        background-size: cover;
+        /* Absolutely guarantees no black gaps */
+        background-position: left top;
+        /* Pins the deity in view and protects the top composition */
     }
 
     .banner-content-container {
@@ -642,17 +702,22 @@
     .banner-text-content {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Internal center alignment */
-        width: 52%; /* Keep it tight on the right side */
+        align-items: center;
+        /* Internal center alignment */
+        width: 52%;
+        /* Keep it tight on the right side */
         margin-right: 0;
-        margin-top: auto; /* Vertically center */
-        margin-bottom: auto; /* Vertically center */
+        margin-top: auto;
+        /* Vertically center */
+        margin-bottom: auto;
+        /* Vertically center */
         text-align: center;
     }
 
     .banner-pill-badge {
         padding: 4px 10px;
-        font-size: 8px; /* Further reduced text size */
+        font-size: 8px;
+        /* Further reduced text size */
         margin-bottom: 8px;
         display: inline-flex;
         flex-direction: row;
@@ -664,7 +729,8 @@
     }
 
     .saturn-title {
-        font-size: 19px; /* Further reduced text size */
+        font-size: 19px;
+        /* Further reduced text size */
         text-align: center;
     }
 
@@ -674,7 +740,8 @@
     }
 
     .saturn-subtitle {
-        font-size: 11px; /* Further reduced text size */
+        font-size: 11px;
+        /* Further reduced text size */
         margin: 4px 0 10px 0;
         text-align: center;
         line-height: 1.4;
@@ -701,14 +768,49 @@
     }
 
     .saturn-submit-btn {
-        padding: 14px 24px;
-        font-size: 14px;
+        padding: 16px 20px;
+        font-size: 15px;
         width: 100%;
         justify-content: center;
+        background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+        border-radius: 10px;
+    }
+
+    /* --- Exact Mobile Form Matching --- */
+    .input-card label svg {
+        background-color: #f3f0ff;
+        padding: 4px;
+        border-radius: 6px;
+        width: 24px;
+        height: 24px;
+        box-sizing: border-box;
+    }
+
+    .input-card label {
+        color: #4338ca;
+        /* Deep purple text for labels */
+        font-weight: 700;
+    }
+
+    /* Birth Time 2x2 Grid */
+    .input-card:nth-child(2) .multi-select-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    /* Adjust inputs to be slightly less pill-shaped on mobile */
+    .multi-select-group select,
+    .single-input-group select,
+    .single-input-group input {
+        border-radius: 12px;
+        padding: 12px 10px;
+        font-weight: 500;
     }
 
     .calculator-overlap-section {
-        margin-top: -45px; /* Increased the overlap upward slightly */
+        margin-top: -45px;
+        /* Increased the overlap upward slightly */
         position: relative;
         z-index: 5;
     }
