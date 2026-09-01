@@ -477,10 +477,10 @@
 }
 
 .saturn-submit-btn {
-    background: linear-gradient(135deg, #2e1065 0%, #4c1d95 100%);
+    background: linear-gradient(135deg, #4c1d95 0%, #3b0764 100%);
     /* Deep purple gradient */
     color: #ffffff;
-    border: 1px solid rgba(212, 175, 55, 0.8);
+    border: none;
     border-radius: 30px;
     padding: 16px 40px;
     font-size: 16px;
@@ -643,6 +643,7 @@
 
     .banner-pill-badge {
         display: inline-flex;
+        margin-bottom: 15px; /* Reduced gap */
     }
 
     .banner-title-wrapper {
@@ -658,12 +659,12 @@
     }
 
     .title-divider-line {
-        margin: 15px auto;
+        margin: 8px auto; /* Reduced gap */
         max-width: 250px;
     }
 
     .saturn-subtitle {
-        margin: 10px 0 35px 0;
+        margin: 5px 0 25px 0; /* Reduced gap */
         font-size: 16px;
         text-align: center;
     }
@@ -675,6 +676,10 @@
 
 /* --- Exact Tablet Form Matching (Only Tablet) --- */
 @media (min-width: 768px) and (max-width: 991px) {
+    .banner-text-content {
+        transform: translateY(70px); /* Push downward visually without affecting banner height */
+    }
+
     .calc-card {
         width: calc(100% - 60px);
         max-width: none;
@@ -759,6 +764,7 @@
         /* Vertically center */
         text-align: center;
         padding-top: 15px; /* Reduce adjustment for mobile */
+        transform: translateY(45px); /* Push text downward visually */
     }
 
     .banner-pill-badge {

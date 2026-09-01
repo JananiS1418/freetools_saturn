@@ -24,39 +24,38 @@
     /* Reduced from 60px to tighten the gap */
 }
 
-.guidance-title-divider {
+.guidance-header.minimal {
+    margin-bottom: 40px;
+}
+
+.guidance-top-decoration {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 450px;
-    margin: 0 auto 15px auto;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-.divider-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(180, 83, 9, 0) 0%, rgba(180, 83, 9, 0.4) 50%, rgba(180, 83, 9, 0) 100%);
-}
-
-.divider-star {
-    color: #d97706;
+.guidance-top-decoration .tiny-star {
+    position: static;
+    color: #d4af37;
     font-size: 14px;
-    margin: 0 10px;
+    background: transparent;
+    padding: 0;
 }
 
-.planet-icon-center {
-    width: 32px;
-    height: 32px;
-    color: #4c1d95;
-    background: #f3e8ff;
+.purple-planet-badge {
+    width: 36px;
+    height: 36px;
+    background: #f3f0ff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+    color: #6366f1;
 }
 
-.planet-icon-center svg {
+.purple-planet-badge svg {
     width: 18px;
     height: 18px;
 }

@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="css/saturn_why_choose.css">
     <link rel="stylesheet" href="css/saturn_about.css">
     <link rel="stylesheet" href="css/saturn_faq.css">
-    <script src="js/navbar.js" defer></script>
-    <script src="js/saturn_faq.js" defer></script>
+    <link rel="stylesheet" href="css/saturn_results.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -353,7 +354,8 @@
         <div class="hero-breadcrumb-container">
             <!-- Breadcrumb (Top Left) -->
             <div class="breadcrumb-pill fade-in-up">
-                <a href="#">Home</a> <span class="breadcrumb-arrow">&gt;</span> <a href="#">Free Tools</a> <span class="breadcrumb-arrow">&gt;</span> Saturn Afflictions
+                <a href="#">Home</a> <span class="breadcrumb-arrow">&gt;</span> <a href="#">Free Tools</a> <span
+                    class="breadcrumb-arrow">&gt;</span> Saturn Afflictions
             </div>
         </div>
 
@@ -490,7 +492,7 @@
                 </div>
 
                 <div class="submit-wrapper fade-in-up delay-5">
-                    <button type="button" class="saturn-submit-btn">
+                    <button type="button" id="calculateBtn" class="saturn-submit-btn">
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="5" />
                             <path
@@ -508,23 +510,509 @@
         </div>
     </section>
 
+    <!-- Saturn Afflictions Results Section (Hidden by Default) -->
+    <section id="resultsSection" class="results-section">
+        <div class="results-container">
+
+            <!-- Top Section: Premium Birth Details Header -->
+            <div class="premium-birth-section">
+                <div class="premium-section-title-wrap">
+                    <div class="title-line-side">
+                        <span class="star-icon glow-star">✦</span>
+                        <div class="line"></div>
+                    </div>
+                    <h2 class="premium-section-title">Birth Details</h2>
+                    <div class="title-line-side right">
+                        <div class="line"></div>
+                        <span class="star-icon glow-star">✦</span>
+                    </div>
+                </div>
+                <div class="premium-title-decorator">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M12 2L14 8l6 1-4.5 4.5L16 19l-4-2.5L8 19l1.5-5.5L5 9l6-1z" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div class="birth-details-card premium-card">
+                    <div class="zodiac-header">
+                        <div class="zodiac-image-ring">
+                            <img src="https://cdn.astroved.com/images/astropedia/moonsign/Sagittarius.png"
+                                alt="Sagittarius" class="zodiac-img">
+                        </div>
+                        <div class="zodiac-info">
+                            <h3 class="zodiac-title">Sagittarius</h3>
+                            <div class="zodiac-subtitle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="5" y1="19" x2="19" y2="5"></line>
+                                    <polyline points="5 5 19 5 19 19"></polyline>
+                                </svg>
+                                Sagittarius
+                            </div>
+                        </div>
+                        <!-- Decorative background stars -->
+                        <span class="bg-star star-1">✦</span>
+                        <span class="bg-star star-2">✦</span>
+                        <span class="bg-star star-3">✦</span>
+                        <span class="bg-star star-4">✦</span>
+
+                        <!-- Decorative Large Zodiac Arrow in background -->
+                        <div class="bg-zodiac-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="19" x2="19" y2="5"></line>
+                                <polyline points="5 5 19 5 19 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg></div>
+                            <div class="detail-text-col">
+                                <div class="detail-label">BIRTH DATE</div>
+                                <div class="detail-value">Monday,<br>July 14, 2003</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg></div>
+                            <div class="detail-text-col">
+                                <div class="detail-label">BIRTH TIME</div>
+                                <div class="detail-value">05:35:00 AM</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg></div>
+                            <div class="detail-text-col">
+                                <div class="detail-label">CITY</div>
+                                <div class="detail-value">Bengaluru</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg></div>
+                            <div class="detail-text-col">
+                                <div class="detail-label">COUNTRY</div>
+                                <div class="detail-value">India</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z">
+                                    </path>
+                                </svg></div>
+                            <div class="detail-text-col">
+                                <div class="detail-label">STATE</div>
+                                <div class="detail-value">Karnataka</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg></div>
+                            <div class="detail-text-col">
+                                <div class="detail-label">BIRTH STAR</div>
+                                <div class="detail-value">Uttarashada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- End of premium-birth-section -->
+
+            <!-- Bottom Section: Premium Saturn Afflictions -->
+            <div class="premium-afflictions-section">
+                <div class="afflictions-header">
+                    <div class="afflictions-icon-top">
+                        <span class="star-icon glow-star small-star-1">✦</span>
+                        <span class="star-icon glow-star small-star-2">✦</span>
+                        <svg viewBox="0 0 100 100" fill="currentColor">
+                            <path d="M 40,25 L 40,75 M 25,40 L 55,40 M 40,55 C 45,45 65,45 65,65 C 65,80 50,85 45,75"
+                                stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h2 class="afflictions-title">Saturn Afflictions</h2>
+                    <p class="afflictions-subtitle">Transit periods of Saturn that may bring challenges and growth.</p>
+                    <div class="afflictions-title-line">
+                        <div class="line"></div>
+                        <div class="diamond"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <!-- Background decorative stars -->
+                    <span class="star-icon glow-star bg-star-left">✦</span>
+                    <span class="star-icon glow-star bg-star-right">✦</span>
+                    <span class="star-icon glow-star bg-star-right-top">✦</span>
+                </div>
+
+                <div class="afflictions-cards-wrapper">
+                    <!-- Card 1 -->
+                    <div class="premium-affliction-card">
+                        <div class="card-badge">01</div>
+                        <div class="card-icon-dashed">
+                            <span class="star-icon glow-star float-star-1">✦</span>
+                            <span class="star-icon glow-star float-star-2">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card-heading">4th House Saturn</h3>
+                        <div class="card-separator">
+                            <div class="sep-line"></div>
+                            <span class="sep-star">✦</span>
+                            <div class="sep-line"></div>
+                        </div>
+                        <div class="card-info-box">
+                            <div class="info-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                CURRENT TRANSIT
+                            </div>
+                            <div class="info-val">Mar 29, 2025 - Jun 03, 2027</div>
+                        </div>
+                        <div class="card-info-box">
+                            <div class="info-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                FUTURE TRANSIT
+                            </div>
+                            <div class="info-val">May 14, 2054 - Apr 07, 2057</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="premium-affliction-card">
+                        <div class="card-badge">02</div>
+                        <div class="card-icon-dashed">
+                            <span class="star-icon glow-star float-star-1">✦</span>
+                            <span class="star-icon glow-star float-star-2">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-heading">7 1/2 House Saturn</h3>
+                        <div class="card-separator">
+                            <div class="sep-line"></div>
+                            <span class="sep-star">✦</span>
+                            <div class="sep-line"></div>
+                        </div>
+                        <div class="card-info-box">
+                            <div class="info-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                CURRENT TRANSIT
+                            </div>
+                            <div class="info-val">-</div>
+                        </div>
+                        <div class="card-info-box">
+                            <div class="info-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                FUTURE TRANSIT
+                            </div>
+                            <div class="info-val">Dec 11, 2043 - Feb 25, 2052</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="premium-affliction-card">
+                        <div class="card-badge">03</div>
+                        <div class="card-icon-dashed">
+                            <span class="star-icon glow-star float-star-1">✦</span>
+                            <span class="star-icon glow-star float-star-2">✦</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="7" cy="12" r="3"></circle>
+                                <circle cx="17" cy="12" r="3"></circle>
+                                <path d="M10 12h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-heading">8th House Saturn</h3>
+                        <div class="card-separator">
+                            <div class="sep-line"></div>
+                            <span class="sep-star">✦</span>
+                            <div class="sep-line"></div>
+                        </div>
+                        <div class="card-info-box">
+                            <div class="info-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                CURRENT TRANSIT
+                            </div>
+                            <div class="info-val">-</div>
+                        </div>
+                        <div class="card-info-box">
+                            <div class="info-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                FUTURE TRANSIT
+                            </div>
+                            <div class="info-val">Jul 13, 2034 - Aug 27, 2036</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-affliction-footer">
+                    <div class="footer-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <div class="footer-text">Saturn's transit periods <span>indicate important phases of challenges and
+                            growth.</span></div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Predictions Accordion -->
+            <div class="premium-predictions-section">
+                <!-- Avatar and Status Header (Moved outside accordion) -->
+                <div class="predictions-header-status" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;">
+                    <div class="prediction-center-avatar" style="position: relative; margin-bottom: 15px;">
+                        <!-- Purple decorative sparks -->
+                        <span style="position: absolute; left: -25px; top: 40%; color: #d1c4e9; font-size: 24px; transform: rotate(-15deg);">✧</span>
+                        <span style="position: absolute; right: -25px; top: 40%; color: #d1c4e9; font-size: 24px; transform: rotate(15deg);">✧</span>
+                        
+                        <div class="avatar-ring" style="width: 110px; height: 110px; border-radius: 50%; padding: 5px; background: #fff; box-shadow: 0 0 0 8px #f5f3ff, 0 8px 25px rgba(109, 40, 217, 0.15); border: none; margin-bottom: 0;">
+                            <img src="https://cdn.astroved.com/images/astropedia/freetools/seven-and-half.jpg" alt="Saturn Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        </div>
+                    </div>
+                    
+                    <div class="prediction-status-text" style="text-align: center;">
+                        <p style="font-size: 16px; color: #1e1b4b; margin: 0 0 5px 0;">Currently you are under the influence of</p>
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; color: #1e1b4b; margin: 0; font-weight: 700;">4th House Saturn</h2>
+                    </div>
+                    
+                    <div class="gold-divider-line" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px; width: 100%;">
+                        <div class="line" style="height: 1px; width: 60px; background: linear-gradient(90deg, transparent, #d4af37);"></div>
+                        <span class="star" style="color: #d4af37; font-size: 14px;">✦</span>
+                        <div class="line" style="height: 1px; width: 60px; background: linear-gradient(270deg, transparent, #d4af37);"></div>
+                    </div>
+                </div>
+
+                <div class="predictions-accordion">
+                    <!-- Accordion Item 1 (Prediction) -->
+                    <div class="accordion-item premium-prediction-item active">
+                        <div class="accordion-header">
+                            <div class="acc-icon-wrap bg-dark show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+                                    <ellipse cx="12" cy="12" rx="8" ry="2.5" transform="rotate(-20 12 12)"></ellipse>
+                                </svg>
+                                <span class="acc-star s1">✦</span>
+                                <span class="acc-star s2">✦</span>
+                            </div>
+                            <div class="acc-icon-wrap bg-purple show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="5" fill="currentColor" stroke="currentColor"></circle>
+                                    <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(-30 12 12)"></ellipse>
+                                </svg>
+                                <span class="acc-star s1">✦</span>
+                                <span class="acc-star s2">✦</span>
+                            </div>
+                            <div class="acc-text-wrap">
+                                <h3 class="acc-title text-purple">Prediction</h3>
+                                <p class="acc-subtitle">Explore the key predictions based on planetary influences and their impact on your life.</p>
+                            </div>
+                            <div class="acc-toggle btn-dark show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="acc-toggle btn-purple show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-body">
+                            
+                            <div class="prediction-sub-cards">
+                                <!-- Card 1 -->
+                                <div class="sub-card blue-card">
+                                    <div class="sub-card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+                                            <path d="M6 3h12l-4 6-2 3-2-3-4-6zm0 18h12l-4-6-2-3-2 3-4 6z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="sub-card-text">
+                                        <h4>7 ½ period of Saturn (Sade Sati)</h4>
+                                        <p>Learn about the 7 ½ year transit period of Saturn and how it may impact different areas of your life.</p>
+                                    </div>
+                                    <div class="sub-card-toggle solid-blue">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 2 -->
+                                <div class="sub-card yellow-card">
+                                    <div class="sub-card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+                                            <path d="M12 21c-4-2-8-6-8-12 0-3 2-6 8-8 6 2 8 5 8 8 0 6-4 10-8 12z"/>
+                                            <path d="M12 21c-2-2-4-6-4-12 0-3 1-6 4-8 3 2 4 5 4 8 0 6-2 10-4 12z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="sub-card-text">
+                                        <h4>Remedies</h4>
+                                        <p>Explore powerful remedies and practices to reduce Saturn's challenging effects.</p>
+                                    </div>
+                                    <div class="sub-card-toggle outline-gold">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item premium-prediction-item">
+                        <div class="accordion-header">
+                            <div class="acc-icon-wrap bg-dark show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+                                    <ellipse cx="12" cy="12" rx="8" ry="2.5" transform="rotate(-20 12 12)"></ellipse>
+                                </svg>
+                                <span class="acc-star s1">✦</span>
+                                <span class="acc-star s2">✦</span>
+                            </div>
+                            <div class="acc-icon-wrap bg-gold show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="5" fill="#1e1b4b"></circle>
+                                    <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(-30 12 12)"></ellipse>
+                                </svg>
+                            </div>
+                            <div class="acc-text-wrap">
+                                <h3 class="acc-title">4th House Saturn</h3>
+                                <p class="acc-subtitle show-inactive">Detailed insights and effects of Saturn in your 4th house.</p>
+                            </div>
+                            <div class="acc-toggle btn-dark show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="acc-toggle btn-gold show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Insights about the 4th house Saturn transit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item premium-prediction-item">
+                        <div class="accordion-header">
+                            <div class="acc-icon-wrap bg-dark show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+                                    <ellipse cx="12" cy="12" rx="8" ry="2.5" transform="rotate(-20 12 12)"></ellipse>
+                                </svg>
+                                <span class="acc-star s1">✦</span>
+                                <span class="acc-star s2">✦</span>
+                            </div>
+                            <div class="acc-icon-wrap bg-gold show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="5" fill="#1e1b4b"></circle>
+                                    <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(-30 12 12)"></ellipse>
+                                </svg>
+                            </div>
+                            <div class="acc-text-wrap">
+                                <h3 class="acc-title">8th House Saturn</h3>
+                                <p class="acc-subtitle show-inactive">Detailed insights and effects of Saturn in your 8th house.</p>
+                            </div>
+                            <div class="acc-toggle btn-dark show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="acc-toggle btn-gold show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>Insights about the 8th house Saturn transit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
     <!-- Saturn Guidance & Remedies Section -->
     <section class="guidance-remedies-section">
         <div class="guidance-container">
             <!-- Section Header -->
-            <div class="guidance-header fade-in-up">
-                <div class="guidance-title-divider">
-                    <span class="divider-line"></span>
-                    <span class="divider-star">✦</span>
-                    <div class="planet-icon-center">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            <div class="guidance-header minimal fade-in-up">
+                <div class="guidance-top-decoration">
+                    <span class="tiny-star">✦</span>
+                    <div class="purple-planet-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="6" />
-                            <ellipse cx="12" cy="12" rx="11" ry="3" transform="rotate(-30 12 12)" />
+                            <circle cx="12" cy="12" r="5" />
+                            <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(-30 12 12)" />
                         </svg>
                     </div>
-                    <span class="divider-star">✦</span>
-                    <span class="divider-line"></span>
+                    <span class="tiny-star">✦</span>
                 </div>
 
                 <h2 class="guidance-title">Saturn <span class="gold-text">Guidance & Remedies</span></h2>
@@ -1154,7 +1642,161 @@
             </div>
         </div>
     </section>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-grid">
 
+                <!-- Column 1: KNOW US -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">KNOW US</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Board Of Advisors</a></li>
+                        <li><a href="#">R&D Institute</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Partner Sites</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Podcast</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: ASTROWORLD -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">ASTROWORLD</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Astrology Services</a></li>
+                        <li><a href="#">Astropedia</a></li>
+                        <li><a href="#">Priest Services</a></li>
+                        <li><a href="#">Love & Marriage</a></li>
+                        <li><a href="#">Family</a></li>
+                        <li><a href="#">Business & Career</a></li>
+                        <li><a href="#">Wealth & Finance</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: LEGAL -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">LEGAL</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                        <li><a href="#">Security Policy</a></li>
+                        <li><a href="#">Shipment Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: SUPPORT -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">SUPPORT</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@astroved.com">support@astroved.com</a></li>
+                        <li><a href="#">Offline Payment</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: CONNECT -->
+                <div class="footer-col connect-col">
+                    <h4 class="footer-heading">CONNECT</h4>
+                    <div class="connect-info">
+                        <p><strong>Customer Care</strong></p>
+                        <p><a href="tel:+919677391108">+91 9677391108</a></p>
+                        <p><a href="tel:+914443419898">+91 44 43419898</a></p>
+                    </div>
+                    <div class="connect-info">
+                        <p><strong>Toll Free (India Only)</strong></p>
+                        <p><a href="tel:18001029098">1800 102 9098</a></p>
+                    </div>
+                    <div class="connect-info">
+                        <p><strong>USA Contact Number</strong></p>
+                        <p><a href="tel:+14129273625">+1 412-927 3625</a></p>
+                    </div>
+                    <div class="connect-info">
+                        <p><strong>Whatsapp</strong></p>
+                        <p><a href="https://wa.me/919677391109">+91 9677391109</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Features Row (App Download & Trust Badges) -->
+            <div class="bottom-features-row">
+                <div class="app-download-section">
+                    <h5 class="app-download-heading">Download AstroVed App</h5>
+                    <div class="app-buttons">
+                        <a href="#" class="app-link" aria-label="Download on Google Play">
+                            <img src="https://cdn.astroved.com/images/images-av/play-store.png" alt="Google Play Store"
+                                style="height: 40px; width: auto; border-radius: 6px;">
+                        </a>
+                        <a href="#" class="app-link" aria-label="Download on the App Store">
+                            <img src="https://cdn.astroved.com/images/images-av/app-store.png" alt="Apple App Store"
+                                style="height: 40px; width: auto; border-radius: 6px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="badges-container">
+                    <img src="https://cdn.astroved.com/images/images-av/years-of-services.png" alt="25 Years Excellence"
+                        class="trust-badge-img" style="height: 70px;">
+                    <img src="https://cdn.astroved.com/images/images-av/podbean-logo.png" alt="PodBean Downloads"
+                        class="trust-badge-img" style="height: 45px;">
+                    <img src="https://cdn.astroved.com/images/images-av/iso.png" alt="ISO 9001:2015 Certified"
+                        class="trust-badge-img" style="height: 45px;">
+                    <img src="https://cdn.astroved.com/images/images-av/sectigo_trust_seal.jpg" alt="Secured by Sectigo"
+                        class="trust-badge-img" style="height: 45px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="footer-container bottom-bar-inner">
+                <div class="copyright-wrapper">
+                    <p class="copyright">&copy; 2001 - 2026 AstroVed - All rights reserved.</p>
+                </div>
+                <div class="social-wrapper">
+                    <span>Follow us :</span>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <img src="https://cdn.astroved.com/images/images-av/facebook.webp" alt="Facebook" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="WhatsApp">
+                        <img src="https://cdn.astroved.com/images/images-av/whatsapp.webp" alt="WhatsApp" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <img src="https://cdn.astroved.com/images/images-av/Twitter.webp" alt="Twitter" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <img src="https://cdn.astroved.com/images/images-av/youtube.webp" alt="YouTube" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <img src="https://cdn.astroved.com/images/images-av/instagram.webp" alt="Instagram" width="28"
+                            height="28">
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <img src="https://cdn.astroved.com/images/images-av/linkedin.webp" alt="LinkedIn" width="28"
+                            height="28">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 </body>
 
 </html>

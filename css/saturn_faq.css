@@ -120,14 +120,14 @@
 .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Reduced gap between cards */
+    gap: 8px; /* Reduced gap between cards */
 }
 
 /* FAQ Item Card */
 .faq-item {
     background-color: #ffffff;
-    border-radius: 16px;
-    padding: 15px 20px; /* Tighter padding */
+    border-radius: 12px;
+    padding: 10px 15px; /* Tighter padding */
     display: flex;
     align-items: flex-start;
     gap: 12px; /* Tighter gap between icon, divider, and text */
@@ -154,8 +154,8 @@
 }
 
 .faq-icon-circle {
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: 1px dashed rgba(212, 175, 55, 0.6);
     display: flex;
@@ -167,8 +167,8 @@
 }
 
 .faq-icon-circle svg {
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
 }
 
 .faq-icon-star {
@@ -196,14 +196,14 @@
 
 .faq-question {
     margin: 0; /* Removed bottom margin, space handled by min-height/answer */
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #3b1766;
     line-height: 1.4;
     transition: color 0.3s ease;
-    min-height: 60px; /* Match icon height */
+    min-height: 44px; /* Match icon height */
     display: flex;
-    align-items: center; /* Perfectly vertically center text within the 60px height */
+    align-items: center; /* Perfectly vertically center text within the height */
 }
 
 .faq-answer {
@@ -228,12 +228,12 @@
 /* Toggle Button */
 .faq-toggle-container {
     flex-shrink: 0;
-    padding-top: 12px; /* Perfectly centers button with the icon */
+    padding-top: 6px; /* Perfectly centers button with the icon */
 }
 
 .faq-toggle-btn {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 1px solid rgba(212, 175, 55, 0.4);
     background: transparent;
@@ -257,8 +257,8 @@
 }
 
 .icon-plus, .icon-minus {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     transition: transform 0.3s ease;
 }
 
@@ -309,13 +309,13 @@
     }
     
     .faq-icon-circle {
-        width: 45px;
-        height: 45px;
+        width: 38px;
+        height: 38px;
     }
 
     .faq-icon-circle svg {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
     }
 
     .faq-text-content {
@@ -323,14 +323,14 @@
     }
 
     .faq-question {
-        font-size: 15px;
+        font-size: 14px;
         padding-right: 30px; /* Space for the toggle button */
-        min-height: 45px; /* Match mobile icon height */
+        min-height: 38px; /* Match mobile icon height */
     }
 
     .faq-toggle-container {
         position: absolute;
-        top: 19px; /* Exact center alignment with 45px icon in a 15px padded box */
+        top: 13px; /* Exact center alignment with 38px icon in a 10px padded box */
         right: 15px;
         padding-top: 0;
     }
