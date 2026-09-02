@@ -5,16 +5,15 @@
 .saturn-banner-section {
     position: relative;
     width: 100%;
-    min-height: 550px;
+    aspect-ratio: 1920 / 640;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 30px 20px 40px 20px;
+    padding: clamp(10px, 1.5vw, 30px) 20px clamp(10px, 2vw, 40px) 20px;
     text-align: center;
     overflow: hidden;
     background-color: transparent;
-    min-height: clamp(480px, 38vw, 580px);
 }
 
 .banner-bg {
@@ -25,7 +24,7 @@
     height: 100%;
     background-image: url('../images/banner.png');
     background-size: 100% 100%;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -45,7 +44,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: 90px; /* Move text down further to avoid overlapping the wings */
+    padding-top: clamp(5px, 3.5vw, 70px); /* Tighter top padding so it stays high */
 }
 
 .hero-breadcrumb-container {
@@ -66,48 +65,49 @@
 
 /* --- Breadcrumb Pill (Like Manglik Page) --- */
 .breadcrumb-pill {
-    background: #ffffff;
-    border-radius: 0 0 14px 0;
+    background: rgba(15, 23, 42, 0.45); /* Dark translucent glass */
+    backdrop-filter: blur(8px);
+    border-radius: 0 0 16px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 24px;
-    font-size: 14px;
-    color: #1e293b;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #f8fafc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
+    text-shadow: none; /* Clean text on dark glass */
 }
 
 .breadcrumb-pill:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
 }
 
 .breadcrumb-pill a {
-    color: #4c1d95;
-    /* Deep purple like the Manglik link color */
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.2s, text-shadow 0.2s;
-    font-weight: 600;
+    transition: color 0.2s;
+    font-weight: 700;
 }
 
 .breadcrumb-pill a:hover {
-    color: #7c3aed;
+    color: #fbbf24;
     text-decoration: underline;
-    text-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
 }
 
 .breadcrumb-arrow {
-    color: #94a3b8;
-    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5); /* Soft white arrow */
+    font-size: 14px;
 }
 
 /* --- Typography & Elements --- */
 
 .banner-pill-badge {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
-    color: #4338ca;
+    background: linear-gradient(135deg, #1e1b4b, #2e1065); /* Deep dark purple gradient for contrast */
+    color: #ffffff;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -116,15 +116,15 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    /* Subtle gold border */
+    margin-bottom: clamp(5px, 1vw, 10px); /* Reduced to save vertical space */
+    box-shadow: 0 4px 15px rgba(30, 27, 75, 0.3); /* Soft dark shadow */
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    /* Stronger gold border */
 }
 
 .pill-star {
-    color: #f59e0b;
-    /* Brighter gold */
+    color: #fbbf24;
+    /* Brighter gold to pop against dark purple */
     font-size: 15px;
     display: inline-block;
     animation: twinkle 1.5s ease-in-out infinite alternate;
@@ -151,20 +151,20 @@
 }
 
 .saturn-title {
-    font-size: 56px;
+    font-size: clamp(24px, 2.9vw, 56px); /* Perfectly scales with aspect ratio */
     font-weight: 800;
-    color: #ffffff;
+    color: #1e1b4b; /* Deep dark purple to match the edges and contrast the light center */
     margin: 0;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6); /* Light halo for crispness */
     position: relative;
     z-index: 5;
 }
 
 .saturn-title .gold-text {
-    background: linear-gradient(to right, #fde047 0%, #eab308 50%, #ca8a04 100%);
-    /* Bright, radiant gold for dark backgrounds */
+    background: linear-gradient(to right, #d97706 0%, #b45309 50%, #92400e 100%);
+    /* Richer, darker gold for light backgrounds */
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -172,7 +172,7 @@
     animation: goldShine 3s linear infinite;
     text-shadow: none;
     /* Removed shadow to keep it crisp */
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); /* Adds a subtle glow/shadow */
+    filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8)); /* Light halo */
 }
 
 @keyframes goldShine {
@@ -186,37 +186,36 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 400px;
-    margin: 20px auto 15px auto;
+    max-width: clamp(200px, 20vw, 400px);
+    margin: clamp(5px, 1vw, 20px) auto clamp(5px, 1vw, 15px) auto;
 }
 
 .title-divider-line::before,
 .title-divider-line::after {
     content: '';
-    height: 1px;
+    height: 1.5px; /* Slightly thicker line */
     flex: 1;
-    background: linear-gradient(90deg, rgba(251, 191, 36, 0) 0%, rgba(251, 191, 36, 0.8) 50%, rgba(251, 191, 36, 0) 100%);
+    background: linear-gradient(90deg, rgba(180, 83, 9, 0) 0%, rgba(180, 83, 9, 0.8) 50%, rgba(180, 83, 9, 0) 100%);
 }
 
 .star-center {
-    color: #fbbf24;
-    /* Bright gold */
+    color: #b45309; /* Deep bronze/gold to stand out */
     font-size: 22px;
     margin: 0 15px;
     display: inline-block;
     animation: twinkle 2s ease-in-out infinite alternate-reverse;
-    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.8));
+    filter: drop-shadow(0 0 4px rgba(180, 83, 9, 0.6));
 }
 
 .saturn-subtitle {
-    font-size: 20px;
-    color: #f8fafc;
-    max-width: 650px;
+    font-size: clamp(13px, 1.1vw, 20px); /* Perfectly scales with aspect ratio */
+    color: #334155; /* Dark slate for high contrast */
+    max-width: clamp(300px, 35vw, 650px); /* Prevent overlapping artwork */
     line-height: 1.6;
-    margin: 5px auto 40px auto;
-    /* Reduced top margin to 5px so total gap matches above divider (15px + 5px = 20px) */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    font-weight: 600;
+    margin: 0 auto clamp(5px, 1vw, 15px) auto;
+    /* Reduced bottom margin so it doesn't get covered by the card */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7); /* Light outline effect */
+    font-weight: 700;
     letter-spacing: 0.5px;
     position: relative;
     z-index: 5;
@@ -599,24 +598,20 @@
     }
 
     .calculator-overlap-section {
-        margin-top: clamp(-80px, -9vw, -60px);
-    }
-
-    .banner-text-content {
-        padding-top: 30px; /* Move slightly downward on tablet */
+        margin-top: clamp(-50px, -5vw, -30px);
     }
 }
 
 @media (max-width: 991px) {
     .saturn-banner-section {
         padding: 30px 20px 140px 20px;
-        min-height: clamp(480px, 50vw, 550px);
+        aspect-ratio: 1024 / 600; /* Approximate tablet banner ratio */
     }
 
     .banner-bg {
         background-image: url('../images/banner-tab.png');
         background-size: 100% 100%;
-        background-position: center center;
+        background-position: center;
     }
 
     .banner-content-container {
@@ -735,46 +730,44 @@
 
 @media (max-width: 767px) {
     .saturn-banner-section {
-        padding: 20px 15px 120px 15px;
-        min-height: 420px;
+        padding: clamp(35px, 10vw, 50px) 15px clamp(35px, 12vw, 55px) 15px; /* Responsive padding to fit text and clear overlap */
+        aspect-ratio: 1024 / 768; /* Exact aspect ratio for new mobile banner */
     }
 
     .banner-bg {
         background-image: url('../images/banner-mobile.png');
         background-size: 100% 100%;
-        background-position: center center;
+        background-position: center;
     }
 
     .banner-content-container {
         flex: 1;
-        align-items: flex-end;
+        align-items: flex-end; /* Push the text block to the right side */
     }
 
     .banner-text-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Internal center alignment */
-        width: 52%;
-        /* Keep it tight on the right side */
-        margin-right: 0;
+        width: 48%; /* Restrict completely to the right side to avoid the bow */
+        margin-right: 2%; /* Keep it slightly off the right edge */
         margin-top: auto;
-        /* Vertically center */
         margin-bottom: auto;
-        /* Vertically center */
         text-align: center;
-        padding-top: 15px; /* Reduce adjustment for mobile */
-        transform: translateY(45px); /* Push text downward visually */
+        padding-top: 0; 
+        transform: translateY(-5px); /* Pull up slightly */
     }
 
     .banner-pill-badge {
-        padding: 4px 10px;
-        font-size: 8px;
-        /* Further reduced text size */
-        margin-bottom: 8px;
+        padding: clamp(3px, 1vw, 4px) clamp(6px, 2vw, 10px);
+        font-size: clamp(6px, 2vw, 9px);
+        margin-bottom: clamp(4px, 1.5vw, 8px);
         display: inline-flex;
         flex-direction: row;
         align-items: center;
+        gap: 4px;
+        white-space: nowrap; /* Force one line */
+        letter-spacing: 0.5px; /* Reduce letter spacing from desktop to save width */
     }
 
     .banner-title-wrapper {
@@ -782,22 +775,22 @@
     }
 
     .saturn-title {
-        font-size: 19px;
-        /* Further reduced text size */
+        font-size: clamp(16px, 5.5vw, 22px); /* Responsive fluid text */
         text-align: center;
+        line-height: 1.15;
     }
 
     .title-divider-line {
-        margin: 5px auto;
-        max-width: 100px;
+        margin: 4px auto;
+        max-width: 80px;
     }
 
     .saturn-subtitle {
-        font-size: 11px;
-        /* Further reduced text size */
-        margin: 4px 0 10px 0;
+        font-size: clamp(9px, 3vw, 11px); /* Responsive fluid text */
+        margin: 4px auto 10px auto;
         text-align: center;
-        line-height: 1.4;
+        line-height: 1.35;
+        max-width: 100%;
     }
 
     .breadcrumb-pill {
