@@ -584,7 +584,7 @@
 }
 
 .card-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     color: #1e1b4b;
     margin: 0 0 15px 0;
@@ -795,13 +795,14 @@
 
 /* --- Premium Prediction Active Item Redesign --- */
 .premium-prediction-item {
-    border: 1px solid #f8fafc;
+    border: 1px solid #e9d5ff;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     background: #ffffff;
     overflow: hidden;
     margin-bottom: 15px;
     transition: all 0.3s ease;
+    border-left: 6px solid #8b5cf6;
 }
 
 /* Toggle displays */
@@ -829,22 +830,21 @@
 }
 
 .accordion-item.active {
-    background: linear-gradient(90deg, #faf5ff, #f3ebff);
+    background: #ffffff;
     border-color: #e9d5ff;
-    border-left: 6px solid #6d28d9;
     box-shadow: 0 8px 25px rgba(109, 40, 217, 0.08);
 }
 
 .accordion-header {
     display: flex;
     align-items: center;
-    padding: 24px 30px;
+    padding: 16px 24px;
     cursor: pointer;
 }
 
 .acc-icon-wrap {
-    width: 54px;
-    height: 54px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -852,42 +852,60 @@
     margin-right: 25px;
     color: #ffffff;
     position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    background: #f5f3ff !important;
+    border: none;
 }
 
-.acc-icon-wrap.bg-purple {
-    background: linear-gradient(135deg, #a855f7, #6d28d9);
+.acc-icon-wrap::before {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background: #362a6e;
+    border-radius: 50%;
+    z-index: 0;
 }
 
-.acc-icon-wrap.bg-dark {
-    background: #0f172a;
+.acc-icon-wrap::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #6d28d9;
+    border-radius: 50%;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
 }
 
-.acc-icon-wrap.bg-gold {
-    background: transparent;
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    color: #d4af37;
+.acc-icon-wrap.bg-purple, .acc-icon-wrap.bg-dark, .acc-icon-wrap.bg-gold {
+    background: #f5f3ff !important;
 }
 
 .acc-icon-wrap svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
 }
 
 .acc-star {
     position: absolute;
     color: #ffffff;
     font-size: 8px;
+    z-index: 1;
 }
 
 .acc-star.s1 {
-    top: 8px;
-    left: 8px;
+    top: 18px;
+    left: 18px;
 }
 
 .acc-star.s2 {
-    bottom: 8px;
-    right: 8px;
+    bottom: 18px;
+    right: 18px;
 }
 
 .acc-text-wrap {
@@ -895,25 +913,28 @@
 }
 
 .acc-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    margin: 0 0 6px 0;
-    font-family: 'Playfair Display', serif;
+    margin: 0 0 4px 0;
+    font-family: 'Inter', sans-serif;
+    color: #0f172a;
 }
 
 .acc-title.text-purple {
-    color: #1e1b4b;
+    color: #0f172a;
 }
 
 .acc-title.text-dark {
-    color: #1e1b4b;
+    color: #0f172a;
 }
 
 .acc-subtitle {
-    font-size: 14px;
+    font-size: 13px;
     color: #64748b;
     margin: 0;
     max-width: 85%;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
 }
 
 .acc-toggle {
@@ -923,24 +944,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
+    border: 1px solid #e9d5ff;
     transition: all 0.3s ease;
+    background: #faf5ff;
+    color: #6d28d9;
 }
 
-.acc-toggle.btn-purple {
-    border-color: #7c3aed;
-    color: #7c3aed;
-}
-
-.acc-toggle.btn-dark {
-    border-color: #94a3b8;
-    color: #475569;
-}
-
-.acc-toggle.btn-gold {
-    border-color: rgba(212, 175, 55, 0.4);
-    color: #d4af37;
-    background: transparent;
+.acc-toggle.btn-purple, .acc-toggle.btn-dark, .acc-toggle.btn-gold {
+    border: 1px solid #e9d5ff;
+    background: #faf5ff;
+    color: #6d28d9;
 }
 
 .acc-toggle svg {
