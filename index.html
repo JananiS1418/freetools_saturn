@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astropedia Navbar</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/saturn_banner.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/saturn_why_choose.css">
     <link rel="stylesheet" href="css/saturn_about.css">
     <link rel="stylesheet" href="css/saturn_faq.css">
-    <link rel="stylesheet" href="css/saturn_results.css">
+    <link rel="stylesheet" href="css/saturn_results.css?v=12">
     <link rel="stylesheet" href="css/footer.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -647,15 +647,7 @@
             <!-- Bottom Section: Premium Saturn Afflictions -->
             <div class="premium-afflictions-section">
                 <div class="afflictions-header">
-                    <div class="afflictions-icon-top">
-                        <span class="star-icon glow-star small-star-1">✦</span>
-                        <span class="star-icon glow-star small-star-2">✦</span>
-                        <svg viewBox="0 0 100 100" fill="currentColor">
-                            <path d="M 40,25 L 40,75 M 25,40 L 55,40 M 40,55 C 45,45 65,45 65,65 C 65,80 50,85 45,75"
-                                stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
+
                     <h2 class="afflictions-title">Saturn Afflictions</h2>
                     <p class="afflictions-subtitle">Transit periods of Saturn that may bring challenges and growth.</p>
                     <div class="afflictions-title-line">
@@ -801,204 +793,589 @@
                     </div>
                 </div>
 
-                <div class="premium-affliction-footer">
-                    <div class="footer-info-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="16" x2="12" y2="12"></line>
-                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                        </svg>
-                    </div>
-                    <div class="footer-text">Saturn's transit periods <span>indicate important phases of challenges and
-                            growth.</span></div>
-                </div>
+
             </div>
 
             <!-- Bottom Section: Predictions Accordion -->
             <div class="premium-predictions-section">
                 <!-- Avatar and Status Header (Moved outside accordion) -->
-                <div class="predictions-header-status" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;">
+                <div class="predictions-header-status"
+                    style="display: flex; flex-direction: column; align-items: center; margin-bottom: 15px;">
                     <div class="prediction-center-avatar" style="position: relative; margin-bottom: 15px;">
                         <!-- Purple decorative sparks -->
-                        <span style="position: absolute; left: -25px; top: 40%; color: #d1c4e9; font-size: 24px; transform: rotate(-15deg);">✧</span>
-                        <span style="position: absolute; right: -25px; top: 40%; color: #d1c4e9; font-size: 24px; transform: rotate(15deg);">✧</span>
-                        
-                        <div class="avatar-ring" style="width: 110px; height: 110px; border-radius: 50%; padding: 5px; background: #fff; box-shadow: 0 0 0 8px #f5f3ff, 0 8px 25px rgba(109, 40, 217, 0.15); border: none; margin-bottom: 0;">
-                            <img src="https://cdn.astroved.com/images/astropedia/freetools/seven-and-half.jpg" alt="Saturn Avatar" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        <span
+                            style="position: absolute; left: -25px; top: 40%; color: #d1c4e9; font-size: 24px; transform: rotate(-15deg);">✧</span>
+                        <span
+                            style="position: absolute; right: -25px; top: 40%; color: #d1c4e9; font-size: 24px; transform: rotate(15deg);">✧</span>
+
+                        <div class="avatar-ring"
+                            style="width: 110px; height: 110px; border-radius: 50%; padding: 5px; background: #fff; box-shadow: 0 0 0 8px #f5f3ff, 0 8px 25px rgba(109, 40, 217, 0.15); border: none; margin-bottom: 0;">
+                            <img src="https://cdn.astroved.com/images/astropedia/freetools/seven-and-half.jpg"
+                                alt="Saturn Avatar"
+                                style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                         </div>
                     </div>
-                    
+
                     <div class="prediction-status-text" style="text-align: center;">
-                        <p style="font-size: 16px; color: #1e1b4b; margin: 0 0 5px 0;">Currently you are under the influence of</p>
-                        <h2 style="font-family: 'Inter', sans-serif; font-size: 28px; color: #1e1b4b; margin: 0; font-weight: 700;">4th House Saturn</h2>
+                        <p style="font-size: 16px; color: #1e1b4b; margin: 0 0 5px 0;">Currently you are under the
+                            influence of</p>
+                        <h2
+                            style="font-family: 'Inter', sans-serif; font-size: 28px; color: #1e1b4b; margin: 0; font-weight: 700;">
+                            4th House Saturn</h2>
                     </div>
-                    
-                    <div class="gold-divider-line" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px; width: 100%;">
-                        <div class="line" style="height: 1px; width: 60px; background: linear-gradient(90deg, transparent, #d4af37);"></div>
+
+                    <div class="gold-divider-line"
+                        style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px; width: 100%;">
+                        <div class="line"
+                            style="height: 1px; width: 60px; background: linear-gradient(90deg, transparent, #d4af37);">
+                        </div>
                         <span class="star" style="color: #d4af37; font-size: 14px;">✦</span>
-                        <div class="line" style="height: 1px; width: 60px; background: linear-gradient(270deg, transparent, #d4af37);"></div>
+                        <div class="line"
+                            style="height: 1px; width: 60px; background: linear-gradient(270deg, transparent, #d4af37);">
+                        </div>
                     </div>
                 </div>
 
                 <div class="predictions-accordion">
-                    <!-- Accordion Item 1 (Prediction) -->
-                    <div class="accordion-item premium-prediction-item">
+                    <!-- Prediction Item -->
+                    <div class="accordion-item premium-prediction-item theme-gold">
                         <div class="accordion-header">
+                            <div class="card-bg-watermark"></div>
                             <div class="acc-icon-wrap show-inactive">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
-                                    <ellipse cx="12" cy="12" rx="8" ry="2.5" transform="rotate(-20 12 12)"></ellipse>
+                                <svg viewBox="0 0 512 512" fill="currentColor">
+                                    <path
+                                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z" />
                                 </svg>
-                                <span class="acc-star s1">✦</span>
-                                <span class="acc-star s2">✦</span>
                             </div>
                             <div class="acc-icon-wrap show-active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
-                                    <ellipse cx="12" cy="12" rx="8" ry="2.5" transform="rotate(-20 12 12)"></ellipse>
+                                <svg viewBox="0 0 512 512" fill="currentColor">
+                                    <path
+                                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z" />
                                 </svg>
-                                <span class="acc-star s1">✦</span>
-                                <span class="acc-star s2">✦</span>
                             </div>
+                            <div class="icon-separator"></div>
                             <div class="acc-text-wrap">
-                                <h3 class="acc-title text-purple">Prediction</h3>
-                                <p class="acc-subtitle">Explore the key predictions based on planetary influences and their impact on your life.</p>
+                                <h3 class="acc-title">Prediction</h3>
+                                <p class="acc-subtitle">Your Saturn period insights at a glance</p>
+                                <div class="subtitle-line"></div>
                             </div>
-                            <div class="acc-toggle btn-dark show-inactive">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <div class="acc-toggle show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </div>
-                            <div class="acc-toggle btn-purple show-active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <div class="acc-toggle show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 6 15 12 9 18"></polyline>
                                 </svg>
                             </div>
                         </div>
-                        <div class="accordion-body">
-                            
-                            <div class="prediction-sub-cards">
-                                <!-- Card 1 -->
-                                <div class="sub-card blue-card">
-                                    <div class="sub-card-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
-                                            <path d="M6 3h12l-4 6-2 3-2-3-4-6zm0 18h12l-4-6-2-3-2 3-4 6z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="sub-card-text">
-                                        <h4>7 ½ period of Saturn (Sade Sati)</h4>
-                                        <p>Learn about the 7 ½ year transit period of Saturn and how it may impact different areas of your life.</p>
-                                    </div>
-                                    <div class="sub-card-toggle solid-blue">
-                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <div class="accordion-body prediction-body-timeline">
+                            <div class="prediction-timeline">
+                                <div class="pred-timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h4 class="pred-timeline-heading">1st Phase</h4>
+                                    <div class="pred-timeline-content">
+                                        <p>You are Aries Moon sign. Currently, you are undergoing the first phase of
+                                            Sade Sati (7 1/2 period of Saturn).</p>
+                                        <p>You shall find this phase to be a challenging one. During this period, you
+                                            may be prone to fatigue, which would act as a constraint for you to march
+                                            ahead. Completing your tasks on time may not be easily possible. More stress
+                                            can lead to insecure feelings. You need to plan and execute everything,
+                                            which would help you to overcome the obstacles. You may feel that things are
+                                            running against you in your career life. You may not be able to derive a
+                                            good name despite your hard efforts. There are chances for health issues
+                                            such as pain in legs and thighs. You might get provoked for even small
+                                            things; unnecessary confusion can disturb your sleeping hours leading to
+                                            late night sleep. On the other hand, you shall travel to temples bringing
+                                            you the much-wanted relief. You would soon realize and be able to
+                                            distinguish between what is right and wrong. There are chances of a job
+                                            change, as you may not be satisfied with the atmosphere prevailing in your
+                                            workplace. It is essential to observe patience, as it would guide you to
+                                            prevent further mishaps.</p>
                                     </div>
                                 </div>
-                                
-                                <!-- Card 2 -->
-                                <div class="sub-card yellow-card">
-                                    <div class="sub-card-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
-                                            <path d="M12 21c-4-2-8-6-8-12 0-3 2-6 8-8 6 2 8 5 8 8 0 6-4 10-8 12z"/>
-                                            <path d="M12 21c-2-2-4-6-4-12 0-3 1-6 4-8 3 2 4 5 4 8 0 6-2 10-4 12z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="sub-card-text">
-                                        <h4>Remedies</h4>
-                                        <p>Explore powerful remedies and practices to reduce Saturn's challenging effects.</p>
-                                    </div>
-                                    <div class="sub-card-toggle outline-gold">
-                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                                <div class="pred-timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h4 class="pred-timeline-heading">Remedy</h4>
+                                    <div class="pred-timeline-content">
+                                        <div class="remedy-box">
+                                            <span class="remedy-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path
+                                                        d="M12 22c-4-2-8-6-8-12 0-3 2-6 8-8 6 2 8 5 8 8 0 6-4 10-8 12z" />
+                                                    <path
+                                                        d="M12 22c-2-2-4-6-4-12 0-3 1-6 4-8 3 2 4 5 4 8 0 6-2 10-4 12z" />
+                                                </svg>
+                                            </span>
+                                            <p>Worship Lord Hanuman on Saturdays. Offer prayers to Lord Ganesha.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Accordion Item 2 -->
-                    <div class="accordion-item premium-prediction-item">
+                    <!-- Accordion Item 1 (4th House Saturn) -->
+                    <div class="accordion-item premium-prediction-item theme-blue">
                         <div class="accordion-header">
+                            <div class="card-bg-watermark"></div>
                             <div class="acc-icon-wrap show-inactive">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 10L12 3l9 7"></path>
-                                    <path d="M5 10v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9"></path>
-                                    <path d="M9 21v-4a3 3 0 0 1 6 0v4"></path>
+                                <svg viewBox="0 0 576 512" fill="currentColor" stroke="none">
+                                    <path
+                                        d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z" />
                                 </svg>
-                                <span class="acc-star s1">✦</span>
-                                <span class="acc-star s2">✦</span>
                             </div>
                             <div class="acc-icon-wrap show-active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 10L12 3l9 7"></path>
-                                    <path d="M5 10v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9"></path>
-                                    <path d="M9 21v-4a3 3 0 0 1 6 0v4"></path>
+                                <svg viewBox="0 0 576 512" fill="currentColor" stroke="none">
+                                    <path
+                                        d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z" />
                                 </svg>
-                                <span class="acc-star s1">✦</span>
-                                <span class="acc-star s2">✦</span>
                             </div>
+                            <div class="icon-separator"></div>
                             <div class="acc-text-wrap">
                                 <h3 class="acc-title">4th House Saturn</h3>
-                                <p class="acc-subtitle">Detailed insights and effects of Saturn in your 4th house.</p>
+                                <p class="acc-subtitle">Home, family, emotions and inner stability</p>
+                                <div class="subtitle-line"></div>
                             </div>
-                            <div class="acc-toggle btn-dark show-inactive">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <div class="acc-toggle show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </div>
-                            <div class="acc-toggle btn-gold show-active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <div class="acc-toggle show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 6 15 12 9 18"></polyline>
                                 </svg>
                             </div>
                         </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <p>Insights about the 4th house Saturn transit.</p>
+                        <div class="accordion-body prediction-body-timeline">
+                            <div class="house-details-container">
+                                <div class="house-details-grid">
+                                    <div class="house-details-left">
+                                        <div class="prediction-timeline">
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>Saturn is transiting the 4th house from your Moon sign. It is
+                                                        called as Artha Ashtama Sani and is not considered as a
+                                                        favorable transit as per the ancient Vedic text.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>The 4th house signifies your residence, domestic environment, and
+                                                        material & physical comforts. Saturn entering this house would
+                                                        bring disturbances in your domestic environment and comforts.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>During this period, there will be a change in your emotional
+                                                        feelings both outwardly and inwardly (the mind). You want to
+                                                        share knowledge with others and are moved by a desire to help
+                                                        people. Producing peace and tranquility in the hearts and minds
+                                                        of fellow beings will bring happiness and solace in this period.
+                                                        Open a path to true spiritual awareness to reduce the intensity
+                                                        of your frustration and disappointments. Your jocular
+                                                        disposition would help you keep you in good spirit. You will use
+                                                        intellect and logic when expressing feelings which can leave you
+                                                        exhausted.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>You will spend money on auspicious work, visiting spiritual
+                                                        shrines. There could be constant dissatisfaction with your life.
+                                                        Your words would be your enemy and could tarnish your image.
+                                                        Avoid loose and unnecessary talks during this period.
+                                                        Speculative trading could bring loss.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>Do not make promises you may not be able to keep up. Too much of
+                                                        anything will turn out poorly. Keep things light and don't get
+                                                        into heavy conversations with anyone who is overly opinionated.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>On the positive side, you would get the opportunity of purchasing
+                                                        assets or gains through paternal side property. Changes are
+                                                        indicated in private life, domestic environment, property, and
+                                                        vehicles. Get ready to accept changes in life.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="house-details-right">
+                                        <div class="saturn-graphic" style="text-align:center;">
+                                            <img src="https://www.astroved.com/astropedia/assets/images/saturn-transit-2023.jpg"
+                                                alt="Saturn graphic"
+                                                style="width:200px; height:200px; object-fit:cover; border-radius:50%; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin: 0 auto 20px;">
+                                        </div>
+                                        <div class="quote-section">
+                                            <p class="quote-text">"Discipline today<br>builds a brighter tomorrow."</p>
+                                            <div class="quote-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="#d97706"
+                                                    stroke-width="1.5">
+                                                    <path
+                                                        d="M12 22c-4-2-8-6-8-12 0-3 2-6 8-8 6 2 8 5 8 8 0 6-4 10-8 12z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <ul class="keyword-list">
+                                            <li>✦ PATIENCE</li>
+                                            <li>✦ STABILITY</li>
+                                            <li>✦ INNER PEACE</li>
+                                            <li>✦ LONG-TERM GROWTH</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="full-remedy-box">
+                                    <div class="full-remedy-left">
+                                        <div class="full-remedy-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="7" r="4" />
+                                                <path d="M5 22v-5l4-3 3 3 3-3 4 3v5" />
+                                            </svg>
+                                        </div>
+                                        <div class="full-remedy-title">Remedy</div>
+                                    </div>
+                                    <div class="full-remedy-content">
+                                        <p>Philanthropy; giving alms, practicing some fasting, devotion, pilgrimage to
+                                            shrines could reduce the impact of the Saturn. Performing or participating
+                                            in Poojas/Homa/Chanting can provide relief. Worshipping Shiva on 13th Moon
+                                            at Pradosham time and fasting on Saturday will help you sail through this
+                                            period.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Accordion Item 3 -->
-                    <div class="accordion-item premium-prediction-item">
+                    <!-- Accordion Item 2 (7th House Saturn) -->
+                    <div class="accordion-item premium-prediction-item theme-indigo">
                         <div class="accordion-header">
+                            <div class="card-bg-watermark"></div>
                             <div class="acc-icon-wrap show-inactive">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 3c-4.5 3-7 6.5-7 9s2.5 6 7 9c4.5-3 7-6.5 7-9s-2.5-6-7-9z"></path>
-                                    <path d="M12 3c-2 3-3 6.5-3 9s1 6 3 9c2-3 3-6.5 3-9s-1-6-3-9z"></path>
+                                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                    <path
+                                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                                 </svg>
-                                <span class="acc-star s1">✦</span>
-                                <span class="acc-star s2">✦</span>
                             </div>
                             <div class="acc-icon-wrap show-active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 3c-4.5 3-7 6.5-7 9s2.5 6 7 9c4.5-3 7-6.5 7-9s-2.5-6-7-9z"></path>
-                                    <path d="M12 3c-2 3-3 6.5-3 9s1 6 3 9c2-3 3-6.5 3-9s-1-6-3-9z"></path>
+                                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                    <path
+                                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                                 </svg>
-                                <span class="acc-star s1">✦</span>
-                                <span class="acc-star s2">✦</span>
                             </div>
+                            <div class="icon-separator"></div>
+                            <div class="acc-text-wrap">
+                                <h3 class="acc-title">7th House Saturn</h3>
+                                <p class="acc-subtitle">Relationships, marriage and partnerships</p>
+                                <div class="subtitle-line"></div>
+                            </div>
+                            <div class="acc-toggle show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="acc-toggle show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 6 15 12 9 18"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-body sadesati-body-timeline">
+                            <div class="house-details-container">
+                                <div class="house-details-grid">
+                                    <div class="house-details-left">
+                                        <div class="section-block">
+                                            <h4 class="section-title">About Sade Sati</h4>
+                                            <p>The word 'Sade Sati' literally means 'seven and half' and denotes the 7
+                                                1/2 year period of Sani, the planet Saturn. While Saturn remains the
+                                                most feared planet, this period, in particular, is considered
+                                                astrologically, as a time of trials and tribulations.</p>
+                                        </div>
+                                        <div class="section-block">
+                                            <h4 class="section-title">Overview</h4>
+                                            <p>Everyone has 3 phases of Saturn's influence during Sade Sati. This is a
+                                                time of special, intense focus from Saturn. Saturn has a job to do of
+                                                triggering some of your karmic lessons and helping dissolve your ego.
+                                                Each of the 3 phases is approximately 2 1/2 years long, so the entire
+                                                period of Sade Sati is 7 1/2 years. At any given point of time, one
+                                                quarter of the population is experiencing Sade Sati.</p>
+                                        </div>
+                                    </div>
+                                    <div class="house-details-right">
+                                        <div class="saturn-graphic" style="text-align:center;">
+                                            <img src="https://www.astroved.com/astropedia/assets/images/saturn-transit-2023.jpg"
+                                                alt="Saturn Graphic"
+                                                style="width:200px; height:200px; object-fit:cover; border-radius:50%; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin: 0 auto 20px;">
+                                        </div>
+                                        <div class="quote-section">
+                                            <p class="quote-text">"Challenges today<br>create a stronger tomorrow."</p>
+                                            <div class="quote-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="#d97706"
+                                                    stroke-width="1.5">
+                                                    <path
+                                                        d="M12 22c-4-2-8-6-8-12 0-3 2-6 8-8 6 2 8 5 8 8 0 6-4 10-8 12z" />
+                                                    <path
+                                                        d="M12 22c-2-2-4-6-4-12 0-3 1-6 4-8 3 2 4 5 4 8 0 6-2 10-4 12z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="phases-box">
+                                    <div class="phases-header">
+                                        <div class="phases-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M4 7l8-4 8 4-8 4-8-4z"></path>
+                                                <path d="M4 12l8 4 8-4"></path>
+                                                <path d="M4 17l8 4 8-4"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="phases-title">The 3 phases of Sade Sati are</h4>
+                                    </div>
+                                    <div class="phases-content">
+                                        <div class="phase-list">
+                                            <div class="phase-item">
+                                                <div class="phase-number">1</div>
+                                                <div class="phase-details">
+                                                    <h5>First Phase (12th from Moon)</h5>
+                                                    <p>When Saturn is passing one sign before your natal Moon (also
+                                                        called 12th Sign counting from Moon Sign as 1 and counting in a
+                                                        clockwise direction in South Indian style chart layout).</p>
+                                                </div>
+                                            </div>
+                                            <div class="phase-item">
+                                                <div class="phase-number">2</div>
+                                                <div class="phase-details">
+                                                    <h5>Second Phase (Over Natal Moon)</h5>
+                                                    <p>When Saturn is over your natal Moon sign.</p>
+                                                </div>
+                                            </div>
+                                            <div class="phase-item">
+                                                <div class="phase-number">3</div>
+                                                <div class="phase-details">
+                                                    <h5>Third Phase (2nd from Moon)</h5>
+                                                    <p>When Saturn is one sign after your natal Moon sign (also called
+                                                        2nd sign counting from Moon as 1 and counting in a clockwise
+                                                        direction in South Indian style chart layout).</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 (8th House Saturn) -->
+                    <div class="accordion-item premium-prediction-item theme-purple">
+                        <div class="accordion-header">
+                            <div class="card-bg-watermark"></div>
+                            <div class="acc-icon-wrap show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s-2-5-2-9c0-3 2-7 2-7s2 4 2 7c0 4-2 9-2 9z" />
+                                    <path d="M12 22s-4-2-6-7c-1-3 0-6 0-6s3 1 5 4c2 3 1 9 1 9z" />
+                                    <path d="M12 22s4-2 6-7c1-3 0-6 0-6s-3 1-5 4c-2 3-1 9-1 9z" />
+                                    <path d="M12 22s-7-1-9-5c-1-3 1-5 1-5s3 2 4 4c2 3 4 6 4 6z" />
+                                    <path d="M12 22s7-1 9-5c1-3-1-5-1-5s-3 2-4 4c-2 3-4 6-4 6z" />
+                                </svg>
+                            </div>
+                            <div class="acc-icon-wrap show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s-2-5-2-9c0-3 2-7 2-7s2 4 2 7c0 4-2 9-2 9z" />
+                                    <path d="M12 22s-4-2-6-7c-1-3 0-6 0-6s3 1 5 4c2 3 1 9 1 9z" />
+                                    <path d="M12 22s4-2 6-7c1-3 0-6 0-6s-3 1-5 4c-2 3-1 9-1 9z" />
+                                    <path d="M12 22s-7-1-9-5c-1-3 1-5 1-5s3 2 4 4c2 3 4 6 4 6z" />
+                                    <path d="M12 22s7-1 9-5c1-3-1-5-1-5s-3 2-4 4c-2 3-4 6-4 6z" />
+                                </svg>
+                            </div>
+                            <div class="icon-separator"></div>
                             <div class="acc-text-wrap">
                                 <h3 class="acc-title">8th House Saturn</h3>
-                                <p class="acc-subtitle">Detailed insights and effects of Saturn in your 8th house.</p>
+                                <p class="acc-subtitle">Transformation, hidden matters and spiritual growth</p>
+                                <div class="subtitle-line"></div>
                             </div>
-                            <div class="acc-toggle btn-dark show-inactive">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <div class="acc-toggle show-inactive">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </div>
-                            <div class="acc-toggle btn-gold show-active">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <div class="acc-toggle show-active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 6 15 12 9 18"></polyline>
                                 </svg>
                             </div>
                         </div>
-                        <div class="accordion-body">
-                            <div class="accordion-content">
-                                <p>Insights about the 8th house Saturn transit.</p>
+                        <div class="accordion-body prediction-body-timeline">
+                            <div class="house-details-container">
+                                <div class="house-details-grid">
+                                    <div class="house-details-left">
+                                        <div class="prediction-timeline eighth-house-timeline">
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot purple-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>Saturn transiting the 8th house from your Moon sign can bring a
+                                                        period of transformation and unexpected changes. The 8th house
+                                                        signifies longevity, inheritance, joint finances, hidden
+                                                        matters, obstacles, and spiritual transformation.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot purple-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>During this period, you may experience delays or sudden changes
+                                                        in personal and financial matters. Matters related to shared
+                                                        assets, inheritance, loans, or family finances may require
+                                                        additional attention. It is advisable to avoid unnecessary risks
+                                                        and handle important decisions with patience.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot purple-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>This transit may also increase your interest in spirituality,
+                                                        research, and understanding the deeper aspects of life.
+                                                        Difficult situations can teach you patience and help you develop
+                                                        greater emotional strength and maturity.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot purple-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>Maintain discipline and avoid overthinking unexpected situations.
+                                                        Proper planning, patience, and a calm approach can help you
+                                                        manage this period effectively.</p>
+                                                </div>
+                                            </div>
+                                            <div class="pred-timeline-item">
+                                                <div class="timeline-dot purple-dot"></div>
+                                                <div class="pred-timeline-content" style="padding-top:0;">
+                                                    <p>On the positive side, this period can bring greater
+                                                        self-awareness, inner strength, and spiritual growth. You may
+                                                        become more capable of handling challenging situations and
+                                                        accepting important changes in life.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="house-details-right">
+                                        <div class="saturn-graphic" style="text-align:center;">
+                                            <img src="https://www.astroved.com/astropedia/assets/images/saturn-transit-2023.jpg"
+                                                alt="Saturn graphic"
+                                                style="width:200px; height:200px; object-fit:cover; border-radius:50%; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin: 0 auto 20px;">
+                                        </div>
+                                        <div class="quote-section">
+                                            <p class="quote-text" style="color: #4c1d95;">"In the depths, you
+                                                discover<br>your true strength."</p>
+                                            <div class="quote-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="#b45309"
+                                                    stroke-width="1.5">
+                                                    <path d="M12 22s-2-5-2-9c0-3 2-7 2-7s2 4 2 7c0 4-2 9-2 9z" />
+                                                    <path d="M12 22s-4-2-6-7c-1-3 0-6 0-6s3 1 5 4c2 3 1 9 1 9z" />
+                                                    <path d="M12 22s4-2 6-7c1-3 0-6 0-6s-3 1-5 4c-2 3-1 9-1 9z" />
+                                                    <path d="M12 22s-7-1-9-5c-1-3 1-5 1-5s3 2 4 4c2 3 4 6 4 6z" />
+                                                    <path d="M12 22s7-1 9-5c1-3-1-5-1-5s-3 2-4 4c-2 3-4 6-4 6z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="full-remedy-box purple-remedy-box">
+                                    <div class="full-remedy-left">
+                                        <div class="full-remedy-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M12 5v14" />
+                                                <path d="M5 12h14" />
+                                                <path d="M5 5l14 14" />
+                                                <path d="M5 19L19 5" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="full-remedy-content">
+                                        <div>
+                                            <div class="full-remedy-title">Remedy</div>
+                                            <p>Worship Lord Shiva and Saturn, especially on Saturdays. Practice charity,
+                                                meditation, and disciplined living. Helping the needy and elderly and
+                                                offering prayers can help reduce the difficulties associated with
+                                                Saturn's influence.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="premium-cta-section">
+                    <div class="cta-decorative-wing left-wing">
+                        <span class="star">✦</span>
+                        <div class="wing-line"></div>
+                        <span class="dot">•</span>
+                        <span class="moon">☾</span>
+                        <span class="dot">•</span>
+                    </div>
+
+                    <div class="cta-center-content">
+                        <button class="premium-cta-btn">
+                            <div class="cta-icon-container">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <circle cx="12" cy="10" r="4" />
+                                    <path d="M12 15c-3.3 0-6 2.7-6 6v1h12v-1c0-3.3-2.7-6-6-6z" />
+                                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        d="M5 10c0-3.9 3.1-7 7-7s7 3.1 7 7v4" />
+                                    <circle cx="5" cy="11" r="2" />
+                                    <circle cx="19" cy="11" r="2" />
+                                    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        d="M19 13v2c0 1.1-.9 2-2 2h-3" />
+                                </svg>
+                            </div>
+                            <div class="cta-divider"></div>
+                            <span class="cta-text">Talk to Astrologer</span>
+                            <span class="cta-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <p class="cta-subtext">Get expert guidance for your Saturn period</p>
+                    </div>
+
+                    <div class="cta-decorative-wing right-wing">
+                        <span class="dot">•</span>
+                        <span class="moon">☾</span>
+                        <span class="dot">•</span>
+                        <div class="wing-line"></div>
+                        <span class="star">✦</span>
                     </div>
                 </div>
             </div>
