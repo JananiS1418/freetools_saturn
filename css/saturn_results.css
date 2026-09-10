@@ -5,7 +5,7 @@
 /* Hidden by default */
 #resultsSection {
     display: none;
-    padding: 40px 20px 60px 20px;
+    padding: 15px 20px 20px 20px;
     background: #faf9fb;
     width: 100%;
 }
@@ -799,9 +799,52 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     overflow: hidden;
     margin-bottom: 15px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     border: 1px solid #f8fafc;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: accordionSlideIn 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Staggered entrance delays */
+.premium-prediction-item:nth-child(1) { animation-delay: 0.1s; }
+.premium-prediction-item:nth-child(2) { animation-delay: 0.25s; }
+.premium-prediction-item:nth-child(3) { animation-delay: 0.4s; }
+.premium-prediction-item:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes accordionSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effects */
+.premium-prediction-item:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.premium-prediction-item:hover .card-bg-watermark {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.premium-prediction-item:hover .acc-toggle {
+    transform: scale(1.15);
+}
+
+.card-bg-watermark {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.acc-toggle {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Themes */
@@ -812,11 +855,19 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
+.accordion-item.theme-gold:hover {
+    box-shadow: 0 12px 35px rgba(251, 191, 36, 0.15);
+}
+
 .accordion-item.theme-blue {
     background: linear-gradient(90deg, #f0f7ff 0%, #e0f2fe 100%);
     border: 1px solid #bfdbfe;
     border-left: 6px solid #60a5fa;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.accordion-item.theme-blue:hover {
+    box-shadow: 0 12px 35px rgba(96, 165, 250, 0.15);
 }
 
 .accordion-item.theme-purple {
@@ -826,11 +877,19 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
+.accordion-item.theme-purple:hover {
+    box-shadow: 0 12px 35px rgba(168, 85, 247, 0.15);
+}
+
 .accordion-item.theme-indigo {
     background: linear-gradient(90deg, #f5f3ff 0%, #e0e7ff 100%);
     border: 1px solid #c7d2fe;
     border-left: 6px solid #6366f1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.accordion-item.theme-indigo:hover {
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.15);
 }
 
 .premium-prediction-item.active {
@@ -848,38 +907,66 @@
 }
 
 .theme-gold .card-bg-watermark {
-    background-image: url('file:///C:/Users/Janani/.gemini/antigravity-ide/brain/72811815-53d3-4201-b22c-55bbd4e8b9d9/prediction_watermark_1788936022003.jpg');
-    background-size: cover;
+    background-image: url('../images/prediction.png');
+    background-size: auto 120%;
+    background-repeat: no-repeat;
     background-position: right center;
-    mask-image: linear-gradient(to right, transparent, black 60%);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 60%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    mask-size: auto 120%;
+    -webkit-mask-size: auto 120%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: right center;
+    -webkit-mask-position: right center;
     mix-blend-mode: multiply;
 }
 
 .theme-blue .card-bg-watermark {
-    background-image: url('file:///C:/Users/Janani/.gemini/antigravity-ide/brain/72811815-53d3-4201-b22c-55bbd4e8b9d9/house_watermark_1788932649236.jpg');
-    background-size: cover;
+    background-image: url('../images/4thhouse.png');
+    background-size: auto 120%;
+    background-repeat: no-repeat;
     background-position: right center;
-    mask-image: linear-gradient(to right, transparent, black 60%);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 60%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    mask-size: auto 120%;
+    -webkit-mask-size: auto 120%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: right center;
+    -webkit-mask-position: right center;
     mix-blend-mode: multiply;
 }
 
 .theme-indigo .card-bg-watermark {
-    background-image: url('file:///C:/Users/Janani/.gemini/antigravity-ide/brain/72811815-53d3-4201-b22c-55bbd4e8b9d9/rings_watermark_1788932698672.jpg');
-    background-size: cover;
+    background-image: url('../images/7thhouse.png');
+    background-size: auto 120%;
+    background-repeat: no-repeat;
     background-position: right center;
-    mask-image: linear-gradient(to right, transparent, black 60%);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 60%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    mask-size: auto 120%;
+    -webkit-mask-size: auto 120%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: right center;
+    -webkit-mask-position: right center;
     mix-blend-mode: multiply;
 }
 
 .theme-purple .card-bg-watermark {
-    background-image: url('file:///C:/Users/Janani/.gemini/antigravity-ide/brain/72811815-53d3-4201-b22c-55bbd4e8b9d9/lotus_watermark_1788932763245.jpg');
-    background-size: cover;
+    background-image: url('../images/8thhouse.png');
+    background-size: auto 120%;
+    background-repeat: no-repeat;
     background-position: right center;
-    mask-image: linear-gradient(to right, transparent, black 60%);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 60%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    mask-size: auto 120%;
+    -webkit-mask-size: auto 120%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: right center;
+    -webkit-mask-position: right center;
     mix-blend-mode: multiply;
 }
 
@@ -1346,7 +1433,7 @@
     }
 
     .detail-item {
-        padding: 20px;
+        padding: 16px;
     }
 
     .results-title {
@@ -1362,6 +1449,49 @@
 
     .afflictions-section-wrapper {
         padding: 20px;
+    }
+
+    /* Premium Birth Details Mobile Fixes */
+    .premium-section-title-wrap {
+        gap: 10px;
+    }
+
+    .title-line-side {
+        width: 40px;
+    }
+
+    .premium-section-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .birth-details-card.premium-card {
+        padding: 25px 15px;
+    }
+
+    .zodiac-header {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .zodiac-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .zodiac-subtitle {
+        justify-content: center;
+    }
+
+    .bg-zodiac-arrow {
+        right: 0;
+        opacity: 0.3;
+    }
+
+    .bg-zodiac-arrow svg {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -1572,7 +1702,7 @@
 }
 
 .house-details-left {
-    flex: 0 0 65%;
+    flex: 1;
 }
 
 .house-details-right {
@@ -1915,5 +2045,515 @@
     .purple-remedy-box .full-remedy-left {
         border-right: none;
         border-bottom: 1px solid #d8b4fe;
+    }
+}
+
+/* --- Remedies Cards Section --- */
+.remedies-section-title-wrap {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.remedies-section-subtitle {
+    font-size: 16px;
+    color: #475569;
+    margin-top: 10px;
+}
+
+.remedies-cards-wrapper {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.remedy-card {
+    flex: 1;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+}
+
+.remedy-card:hover {
+    transform: translateY(-6px) rotate(0.5deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.remedy-card.saturn-remedy {
+    background-color: #f5f8ff;
+    border: 1px solid #e0e7ff;
+    opacity: 0;
+    animation: slideInLeft 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s forwards;
+}
+
+.remedy-card.saturn-remedy:hover {
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+}
+
+.remedy-card.hanuman-remedy {
+    background-color: #fff9f2;
+    border: 1px solid #ffedd5;
+    opacity: 0;
+    animation: slideInRight 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s forwards;
+}
+
+.remedy-card.hanuman-remedy:hover {
+    box-shadow: 0 20px 50px rgba(234, 88, 12, 0.15);
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.remedy-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.remedy-icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.saturn-remedy .remedy-icon-box {
+    background-color: #1e1b4b;
+}
+
+.hanuman-remedy .remedy-icon-box {
+    background-color: #c2410c;
+}
+
+.remedy-title-area h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.saturn-remedy .remedy-title-area h3 {
+    color: #1e3a8a;
+}
+
+.hanuman-remedy .remedy-title-area h3 {
+    color: #7c2d12;
+}
+
+.remedy-title-area p {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.saturn-remedy .remedy-title-area p {
+    color: #4f46e5;
+}
+
+.hanuman-remedy .remedy-title-area p {
+    color: #ea580c;
+}
+
+.remedy-intro {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #475569;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+
+.mantra-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    z-index: 2;
+}
+
+.saturn-remedy .mantra-box {
+    background-color: #ebf4ff;
+}
+
+.hanuman-remedy .mantra-box {
+    background-color: #ffedd5;
+}
+
+.mantra-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.saturn-remedy .mantra-box h4 {
+    color: #1e3a8a;
+}
+
+.hanuman-remedy .mantra-box h4 {
+    color: #9a3412;
+}
+
+.mantra-deco {
+    font-size: 12px;
+}
+
+.saturn-remedy .mantra-deco {
+    color: #6366f1;
+}
+
+.hanuman-remedy .mantra-deco {
+    color: #f97316;
+}
+
+.remedy-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+    z-index: 2;
+}
+
+.rem-img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 3px solid #f59e0b;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rem-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.12);
+}
+
+.remedy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.remedy-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #334155;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.remedy-list li:hover {
+    background: rgba(0, 0, 0, 0.03);
+    transform: translateX(8px);
+}
+
+.saturn-remedy .remedy-list li:hover {
+    background: rgba(99, 102, 241, 0.06);
+}
+
+.hanuman-remedy .remedy-list li:hover {
+    background: rgba(249, 115, 22, 0.06);
+}
+
+.list-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: -4px;
+    transition: all 0.3s ease;
+}
+
+.remedy-list li:hover .list-icon {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.saturn-remedy .list-icon {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.saturn-remedy .remedy-list li:hover .list-icon {
+    background-color: #c7d2fe;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.hanuman-remedy .list-icon {
+    background-color: #ffedd5;
+    color: #ea580c;
+}
+
+.hanuman-remedy .remedy-list li:hover .list-icon {
+    background-color: #fed7aa;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+}
+
+.list-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+@media (max-width: 768px) {
+    .remedies-cards-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* --- Not Under Influence Banner --- */
+.nui-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #fef4e8, #fdf7f0, #eeddcc);
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #fae8d4;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.nui-banner::before {
+    content: '✦';
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: #d97706;
+    font-size: 18px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.nui-banner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background-image: url('https://www.astroved.com/astropedia/assets/images/saturn-transit-2023.jpg');
+    background-size: cover;
+    background-position: center left;
+    opacity: 0.7;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    mask-image: linear-gradient(to right, transparent, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
+}
+
+.nui-avatar-group {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 2;
+    animation: avatarFloat 3s ease-in-out infinite;
+}
+
+@keyframes avatarFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.nui-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1e1b4b;
+    padding: 2px;
+    background: transparent;
+    box-shadow: 0 0 15px rgba(217, 119, 6, 0.15);
+    animation: avatarGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes avatarGlow {
+    0% { box-shadow: 0 0 15px rgba(217, 119, 6, 0.15); }
+    100% { box-shadow: 0 0 30px rgba(217, 119, 6, 0.4), 0 0 60px rgba(217, 119, 6, 0.15); }
+}
+
+.nui-badge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 32px;
+    height: 32px;
+    background: #fef3c7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #b45309;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffffff;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.nui-content-group {
+    flex-grow: 1;
+    padding: 0 30px;
+    margin-left: 30px;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: 2;
+}
+
+.nui-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #1e1b4b;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.nui-desc {
+    font-size: 15px;
+    color: #475569;
+    margin: 0 0 15px 0;
+}
+
+.nui-features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nui-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.nui-feature-sep {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.nui-feature svg {
+    width: 18px;
+    height: 18px;
+}
+
+.nui-cta-group {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    z-index: 2;
+    min-width: 260px;
+}
+
+.nui-cta-text {
+    font-size: 14px;
+    color: #334155;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.nui-cta-text em {
+    font-weight: 600;
+    font-style: italic;
+    color: #1e1b4b;
+}
+
+.nui-cta-btn {
+    background: #1e1b4b;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.nui-cta-btn:hover {
+    background: #312e81;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 27, 75, 0.3);
+}
+
+.nui-cta-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 992px) {
+    .nui-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .nui-content-group {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 0 0 20px 0;
+    }
+
+    .nui-features {
+        justify-content: center;
+    }
+
+    .nui-cta-group {
+        padding-left: 0;
+        align-items: center;
+        text-align: center;
     }
 }

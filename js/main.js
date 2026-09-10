@@ -50,16 +50,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     const submitBtn = document.getElementById('calculateBtn');
     const resultsSection = document.getElementById('resultsSection');
+    const notUnderInfluenceSection = document.getElementById('notUnderInfluenceSection');
+    const afflictedResults = document.getElementById('afflictedResults');
+    let calcClickCount = 0;
 
-    if (submitBtn && resultsSection) {
+    if (submitBtn) {
         submitBtn.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Show the results section
-            resultsSection.style.display = 'block';
+            calcClickCount++;
             
-            // Smooth scroll to results
-            resultsSection.scrollIntoView({ behavior: 'smooth' });
+            // Always show the results section container (for Birth Details & Affliction cards)
+            if (resultsSection) resultsSection.style.display = 'block';
+
+            if (calcClickCount % 2 === 1) {
+                // First click: Show "Not under influence" banner, hide afflicted predictions
+                if (notUnderInfluenceSection) notUnderInfluenceSection.style.display = 'flex';
+                if (afflictedResults) afflictedResults.style.display = 'none';
+                
+                if (resultsSection) resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                // Second click: Show regular afflicted predictions, hide banner
+                if (notUnderInfluenceSection) notUnderInfluenceSection.style.display = 'none';
+                if (afflictedResults) afflictedResults.style.display = 'block';
+                
+                if (resultsSection) resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     }
 

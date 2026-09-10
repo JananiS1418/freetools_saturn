@@ -11,6 +11,8 @@ body {
     -webkit-font-smoothing: antialiased;
     padding-top: 71px;
     /* Compensate for fixed header */
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Header Styles */

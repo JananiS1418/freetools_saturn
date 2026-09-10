@@ -44,17 +44,22 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-top: clamp(5px, 3.5vw, 70px); /* Tighter top padding so it stays high */
+    padding-top: clamp(5px, 3.5vw, 70px);
+    /* Tighter top padding so it stays high */
 }
 
 .hero-breadcrumb-container {
     position: absolute;
     top: 0;
-    left: -20px; /* Counteract parent's 20px left padding */
-    width: calc(100% + 40px); /* Full width of the screen */
+    left: -20px;
+    /* Counteract parent's 20px left padding */
+    width: calc(100% + 40px);
+    /* Full width of the screen */
     max-width: 1800px;
-    padding: 0 30px; /* Exact same padding as navbar */
-    margin: 0 auto; /* Center like navbar if screen > 1800px */
+    padding: 0 30px;
+    /* Exact same padding as navbar */
+    margin: 0 auto;
+    /* Center like navbar if screen > 1800px */
     right: 0;
     z-index: 20;
     display: flex;
@@ -65,7 +70,8 @@
 
 /* --- Breadcrumb Pill (Like Manglik Page) --- */
 .breadcrumb-pill {
-    background: rgba(15, 23, 42, 0.45); /* Dark translucent glass */
+    background: rgba(15, 23, 42, 0.45);
+    /* Dark translucent glass */
     backdrop-filter: blur(8px);
     border-radius: 0 0 16px 0;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -79,7 +85,8 @@
     gap: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
-    text-shadow: none; /* Clean text on dark glass */
+    text-shadow: none;
+    /* Clean text on dark glass */
 }
 
 .breadcrumb-pill:hover {
@@ -99,14 +106,16 @@
 }
 
 .breadcrumb-arrow {
-    color: rgba(255, 255, 255, 0.5); /* Soft white arrow */
+    color: rgba(255, 255, 255, 0.5);
+    /* Soft white arrow */
     font-size: 14px;
 }
 
 /* --- Typography & Elements --- */
 
 .banner-pill-badge {
-    background: linear-gradient(135deg, #1e1b4b, #2e1065); /* Deep dark purple gradient for contrast */
+    background: linear-gradient(135deg, #1e1b4b, #2e1065);
+    /* Deep dark purple gradient for contrast */
     color: #ffffff;
     font-size: 12px;
     font-weight: 800;
@@ -116,8 +125,10 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: clamp(5px, 1vw, 10px); /* Reduced to save vertical space */
-    box-shadow: 0 4px 15px rgba(30, 27, 75, 0.3); /* Soft dark shadow */
+    margin-bottom: clamp(5px, 1vw, 10px);
+    /* Reduced to save vertical space */
+    box-shadow: 0 4px 15px rgba(30, 27, 75, 0.3);
+    /* Soft dark shadow */
     border: 1px solid rgba(212, 175, 55, 0.7);
     /* Stronger gold border */
 }
@@ -151,13 +162,16 @@
 }
 
 .saturn-title {
-    font-size: clamp(24px, 2.9vw, 56px); /* Perfectly scales with aspect ratio */
+    font-size: clamp(24px, 2.9vw, 56px);
+    /* Perfectly scales with aspect ratio */
     font-weight: 800;
-    color: #1e1b4b; /* Deep dark purple to match the edges and contrast the light center */
+    color: #1e1b4b;
+    /* Deep dark purple to match the edges and contrast the light center */
     margin: 0;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6); /* Light halo for crispness */
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+    /* Light halo for crispness */
     position: relative;
     z-index: 5;
 }
@@ -172,7 +186,8 @@
     animation: goldShine 3s linear infinite;
     text-shadow: none;
     /* Removed shadow to keep it crisp */
-    filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8)); /* Light halo */
+    filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.8));
+    /* Light halo */
 }
 
 @keyframes goldShine {
@@ -193,13 +208,15 @@
 .title-divider-line::before,
 .title-divider-line::after {
     content: '';
-    height: 1.5px; /* Slightly thicker line */
+    height: 1.5px;
+    /* Slightly thicker line */
     flex: 1;
     background: linear-gradient(90deg, rgba(180, 83, 9, 0) 0%, rgba(180, 83, 9, 0.8) 50%, rgba(180, 83, 9, 0) 100%);
 }
 
 .star-center {
-    color: #b45309; /* Deep bronze/gold to stand out */
+    color: #b45309;
+    /* Deep bronze/gold to stand out */
     font-size: 22px;
     margin: 0 15px;
     display: inline-block;
@@ -208,13 +225,17 @@
 }
 
 .saturn-subtitle {
-    font-size: clamp(13px, 1.1vw, 20px); /* Perfectly scales with aspect ratio */
-    color: #334155; /* Dark slate for high contrast */
-    max-width: clamp(300px, 35vw, 650px); /* Prevent overlapping artwork */
+    font-size: clamp(13px, 1.1vw, 20px);
+    /* Perfectly scales with aspect ratio */
+    color: #334155;
+    /* Dark slate for high contrast */
+    max-width: clamp(300px, 35vw, 650px);
+    /* Prevent overlapping artwork */
     line-height: 1.6;
     margin: 0 auto clamp(5px, 1vw, 15px) auto;
     /* Reduced bottom margin so it doesn't get covered by the card */
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7); /* Light outline effect */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+    /* Light outline effect */
     font-weight: 700;
     letter-spacing: 0.5px;
     position: relative;
@@ -605,7 +626,8 @@
 @media (max-width: 991px) {
     .saturn-banner-section {
         padding: 30px 20px 140px 20px;
-        aspect-ratio: 1024 / 600; /* Approximate tablet banner ratio */
+        aspect-ratio: 1024 / 600;
+        /* Approximate tablet banner ratio */
     }
 
     .banner-bg {
@@ -638,7 +660,8 @@
 
     .banner-pill-badge {
         display: inline-flex;
-        margin-bottom: 15px; /* Reduced gap */
+        margin-bottom: 15px;
+        /* Reduced gap */
     }
 
     .banner-title-wrapper {
@@ -654,12 +677,14 @@
     }
 
     .title-divider-line {
-        margin: 8px auto; /* Reduced gap */
+        margin: 8px auto;
+        /* Reduced gap */
         max-width: 250px;
     }
 
     .saturn-subtitle {
-        margin: 5px 0 25px 0; /* Reduced gap */
+        margin: 5px 0 25px 0;
+        /* Reduced gap */
         font-size: 16px;
         text-align: center;
     }
@@ -672,7 +697,8 @@
 /* --- Exact Tablet Form Matching (Only Tablet) --- */
 @media (min-width: 768px) and (max-width: 991px) {
     .banner-text-content {
-        transform: translateY(70px); /* Push downward visually without affecting banner height */
+        transform: translateY(70px);
+        /* Push downward visually without affecting banner height */
     }
 
     .calc-card {
@@ -730,8 +756,10 @@
 
 @media (max-width: 767px) {
     .saturn-banner-section {
-        padding: clamp(35px, 10vw, 50px) 15px clamp(35px, 12vw, 55px) 15px; /* Responsive padding to fit text and clear overlap */
-        aspect-ratio: 1024 / 768; /* Exact aspect ratio for new mobile banner */
+        padding: clamp(35px, 10vw, 50px) 15px clamp(35px, 12vw, 55px) 15px;
+        /* Responsive padding to fit text and clear overlap */
+        aspect-ratio: 1024 / 768;
+        /* Exact aspect ratio for new mobile banner */
     }
 
     .banner-bg {
@@ -742,20 +770,24 @@
 
     .banner-content-container {
         flex: 1;
-        align-items: flex-end; /* Push the text block to the right side */
+        align-items: flex-end;
+        /* Push the text block to the right side */
     }
 
     .banner-text-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 48%; /* Restrict completely to the right side to avoid the bow */
-        margin-right: 2%; /* Keep it slightly off the right edge */
+        width: 48%;
+        /* Restrict completely to the right side to avoid the bow */
+        margin-right: 2%;
+        /* Keep it slightly off the right edge */
         margin-top: auto;
         margin-bottom: auto;
         text-align: center;
-        padding-top: 0; 
-        transform: translateY(-5px); /* Pull up slightly */
+        padding-top: 0;
+        transform: translateY(-5px);
+        /* Pull up slightly */
     }
 
     .banner-pill-badge {
@@ -766,8 +798,10 @@
         flex-direction: row;
         align-items: center;
         gap: 4px;
-        white-space: nowrap; /* Force one line */
-        letter-spacing: 0.5px; /* Reduce letter spacing from desktop to save width */
+        white-space: nowrap;
+        /* Force one line */
+        letter-spacing: 0.5px;
+        /* Reduce letter spacing from desktop to save width */
     }
 
     .banner-title-wrapper {
@@ -775,7 +809,8 @@
     }
 
     .saturn-title {
-        font-size: clamp(16px, 5.5vw, 22px); /* Responsive fluid text */
+        font-size: clamp(16px, 5.5vw, 22px);
+        /* Responsive fluid text */
         text-align: center;
         line-height: 1.15;
     }
@@ -786,7 +821,8 @@
     }
 
     .saturn-subtitle {
-        font-size: clamp(9px, 3vw, 11px); /* Responsive fluid text */
+        font-size: clamp(9px, 3vw, 11px);
+        /* Responsive fluid text */
         margin: 4px auto 10px auto;
         text-align: center;
         line-height: 1.35;
@@ -800,7 +836,8 @@
 
     .hero-breadcrumb-container {
         padding: 0 15px;
-        left: -15px; /* Counteract parent's 15px left padding */
+        left: -15px;
+        /* Counteract parent's 15px left padding */
         width: calc(100% + 30px);
     }
 
@@ -848,6 +885,13 @@
         color: #4338ca;
         /* Deep purple text for labels */
         font-weight: 700;
+    }
+
+    /* Birth Date 3-col Grid */
+    .input-card:nth-child(1) .multi-select-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
     }
 
     /* Birth Time 2x2 Grid */
