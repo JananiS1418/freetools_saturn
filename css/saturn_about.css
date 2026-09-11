@@ -127,6 +127,7 @@
             #f6eedc 15deg 30deg);
     border-radius: 50%;
     z-index: -1;
+    animation: slow-rotate 40s linear infinite;
 }
 
 /* Tiny stars on the outer ring */
@@ -134,37 +135,57 @@
     position: absolute;
     color: #d4af37;
     font-size: 14px;
+    animation: star-twinkle 3s ease-in-out infinite alternate;
 }
 
 .ring-star.s1 {
     top: -9px;
     left: 50%;
     transform: translateX(-50%);
+    animation-delay: 0s;
 }
 
 .ring-star.s2 {
     bottom: -9px;
     left: 50%;
     transform: translateX(-50%);
+    animation-delay: 1.5s;
 }
 
 .ring-star.s3 {
     left: -9px;
     top: 50%;
     transform: translateY(-50%);
+    animation-delay: 0.7s;
 }
 
 .ring-star.s4 {
     right: -9px;
     top: 50%;
     transform: translateY(-50%);
+    animation-delay: 2.2s;
 }
 
 .saturn-glyph {
     width: 50px;
     height: 50px;
     color: #4a2176;
-    /* Dark purple */
+    animation: float-glyph 6s ease-in-out infinite;
+}
+
+@keyframes slow-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes star-twinkle {
+    0% { opacity: 0.2; text-shadow: 0 0 0px transparent; }
+    100% { opacity: 1; text-shadow: 0 0 8px rgba(212, 175, 55, 0.8); }
+}
+
+@keyframes float-glyph {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
 }
 
 /* --- Right Side: Text Content --- */
@@ -358,6 +379,12 @@
         0 calc(100% - 15px), 0 15px
     );
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.afflictions-quote-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(74, 33, 118, 0.1);
 }
 
 .afflictions-quote-box::before {
@@ -428,6 +455,11 @@
     margin-bottom: 40px;
     position: relative;
     z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(8px);
 }
 
 .timeline-item:last-child {
@@ -450,6 +482,13 @@
     margin-top: 15px;
     box-shadow: 0 0 0 4px #fcfbf9;
     /* creates gap over the dashed line */
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-number {
+    background-color: #3b1766;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px #fcfbf9, 0 0 10px rgba(74, 33, 118, 0.3);
 }
 
 /* Middle: Icon */
@@ -464,12 +503,25 @@
     align-items: center;
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon-box {
+    background-color: #f7f1fc;
+    border-color: #4a2176;
+    box-shadow: 0 8px 20px rgba(74, 33, 118, 0.15);
+    transform: scale(1.05);
 }
 
 .timeline-icon-box svg {
     width: 30px;
     height: 30px;
     color: #4a2176;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon-box svg {
+    transform: scale(1.1);
 }
 
 /* Right: Content */

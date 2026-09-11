@@ -1422,14 +1422,27 @@
 
 /* Responsive */
 @media (max-width: 991px) {
-    .afflictions-cards-container {
-        grid-template-columns: 1fr;
+    .afflictions-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .afflictions-cards-wrapper .premium-affliction-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 12.5px);
+    }
+
+    .remedies-cards-wrapper {
+        flex-direction: row;
+        display: flex;
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .details-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .detail-item {
@@ -1450,6 +1463,7 @@
     .afflictions-section-wrapper {
         padding: 20px;
     }
+
 
     /* Premium Birth Details Mobile Fixes */
     .premium-section-title-wrap {
@@ -2327,11 +2341,7 @@
 
 
 
-@media (max-width: 768px) {
-    .remedies-cards-wrapper {
-        flex-direction: column;
-    }
-}
+
 
 /* --- Not Under Influence Banner --- */
 .nui-banner {
@@ -2555,5 +2565,736 @@
         padding-left: 0;
         align-items: center;
         text-align: center;
+    }
+}
+
+/* ========================================================================
+   MOBILE RESPONSIVE FIXES (480px and below)
+   ======================================================================== */
+@media (max-width: 480px) {
+
+    /* --- Results Section Container --- */
+    #resultsSection {
+        padding: 10px 10px 15px 10px;
+    }
+
+    .results-container {
+        gap: 25px;
+    }
+
+    /* --- Premium Section Title --- */
+    .premium-section-title-wrap {
+        gap: 8px;
+    }
+
+    .title-line-side {
+        width: 30px;
+    }
+
+    .premium-section-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .premium-title-decorator {
+        margin-bottom: 15px;
+    }
+
+    /* --- Birth Details Card --- */
+    .birth-details-card.premium-card {
+        padding: 20px 12px;
+        border-radius: 14px;
+    }
+
+    .zodiac-header {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .zodiac-image-ring {
+        width: 100px;
+        height: 100px;
+    }
+
+    .zodiac-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .zodiac-subtitle {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .bg-zodiac-arrow {
+        display: none;
+    }
+
+    /* --- Details Grid (Birth Info Items) --- */
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .detail-item {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        align-items: center;
+        padding: 14px 16px;
+        gap: 0 14px;
+        border-radius: 10px;
+    }
+
+    .detail-item:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(75, 43, 184, 0.08);
+    }
+
+    .detail-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .detail-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .detail-text-col {
+        grid-row: 1;
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 95px 1fr;
+        align-items: center;
+        gap: 0 15px;
+    }
+
+    .detail-label {
+        font-size: 12px;
+        white-space: nowrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-label::after {
+        content: ":";
+    }
+
+    .detail-value {
+        font-size: 15px;
+        text-align: left;
+        white-space: normal;
+        word-break: break-word;
+        font-weight: 600;
+    }
+
+    /* --- Saturn Afflictions Section --- */
+    .afflictions-header {
+        margin-bottom: 35px;
+    }
+
+    .afflictions-title {
+        font-size: 24px;
+    }
+
+    .afflictions-subtitle {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .bg-star-left,
+    .bg-star-right,
+    .bg-star-right-top {
+        display: none;
+    }
+
+    /* --- Affliction Cards Wrapper - SINGLE COLUMN --- */
+    .afflictions-cards-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .afflictions-cards-wrapper .premium-affliction-card:last-child:nth-child(odd) {
+        grid-column: 1;
+        justify-self: stretch;
+        width: 100%;
+    }
+
+    .premium-affliction-card {
+        padding: 30px 20px 20px;
+        border-radius: 16px;
+    }
+
+    .premium-affliction-card:hover {
+        transform: none;
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.06);
+    }
+
+    .card-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+        top: -16px;
+    }
+
+    .card-icon-dashed {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .card-icon-dashed svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .card-heading {
+        font-size: 18px;
+        margin: 0 0 12px 0;
+    }
+
+    .card-separator {
+        margin-bottom: 18px;
+    }
+
+    .card-info-box {
+        padding: 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-label {
+        font-size: 9px;
+        gap: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .info-label svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .info-val {
+        font-size: 12px;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* --- Afflictions Footer --- */
+    .premium-affliction-footer {
+        padding: 10px 16px;
+        gap: 8px;
+        border-radius: 40px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+
+    /* --- Prediction Accordion --- */
+    .predictions-header {
+        margin-bottom: 25px;
+    }
+
+    .predictions-intro {
+        font-size: 15px;
+    }
+
+    .predictions-active-title {
+        font-size: 18px;
+    }
+
+    .predictions-accordion {
+        gap: 12px;
+    }
+
+    .accordion-header {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .acc-icon-wrap {
+        width: 46px;
+        height: 46px;
+        margin-right: 12px;
+    }
+
+    .acc-icon-wrap svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .icon-separator {
+        display: none;
+    }
+
+    .acc-title {
+        font-size: 16px;
+        margin: 0 0 2px 0;
+    }
+
+    .acc-subtitle {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .acc-toggle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .acc-toggle svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .accordion-body {
+        padding: 0 14px 20px 14px;
+    }
+
+    .card-bg-watermark {
+        width: 150px;
+        opacity: 0.3;
+    }
+
+    /* --- Prediction Body Timeline --- */
+    .prediction-body-timeline,
+    .sadesati-body-timeline {
+        padding: 15px 14px 20px 14px !important;
+    }
+
+    .prediction-timeline {
+        padding-left: 15px;
+    }
+
+    .prediction-timeline::before {
+        left: 19px;
+    }
+
+    .pred-timeline-heading {
+        font-size: 14px;
+        padding-left: 12px;
+    }
+
+    .pred-timeline-content {
+        padding-left: 12px;
+    }
+
+    .pred-timeline-content p {
+        font-size: 13px;
+    }
+
+    /* --- Sub Cards --- */
+    .sub-card {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+    }
+
+    .sub-card-icon {
+        width: 44px;
+        height: 44px;
+        margin-right: 12px;
+    }
+
+    .sub-card-icon::before {
+        width: 34px;
+        height: 34px;
+    }
+
+    .sub-card-text h4 {
+        font-size: 15px;
+    }
+
+    .sub-card-text p {
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .sub-card-toggle {
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+    }
+
+    .sub-card-watermark {
+        width: 60px;
+        right: 40px;
+    }
+
+    /* --- Section Blocks (7th House) --- */
+    .section-title {
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    .section-block p {
+        font-size: 13px;
+    }
+
+    /* --- Phases Box --- */
+    .phases-header {
+        padding: 8px 14px;
+    }
+
+    .phases-title {
+        font-size: 14px;
+    }
+
+    .phases-content {
+        padding: 14px;
+        border-radius: 0 10px 10px 10px;
+    }
+
+    .phase-item {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .phase-number {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+
+    .phase-details h5 {
+        font-size: 13px;
+    }
+
+    .phase-details p {
+        font-size: 12px;
+    }
+
+    /* --- Full Remedy Box --- */
+    .full-remedy-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .full-remedy-left {
+        border-right: none;
+        border-bottom: 1px solid #fcd34d;
+        padding-right: 0;
+        padding-bottom: 12px;
+    }
+
+    .purple-remedy-box .full-remedy-left {
+        border-right: none;
+        border-bottom: 1px solid #d8b4fe;
+    }
+
+    .full-remedy-title {
+        font-size: 14px;
+    }
+
+    .full-remedy-content p {
+        font-size: 13px;
+    }
+
+    /* --- Remedies Cards --- */
+    .remedies-section-title-wrap {
+        margin-top: 35px;
+        margin-bottom: 25px;
+    }
+
+    .remedies-cards-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .remedy-card {
+        padding: 20px;
+    }
+
+    .remedy-title-area h3 {
+        font-size: 20px;
+    }
+
+    .remedy-images {
+        gap: 8px;
+    }
+
+    .rem-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .mantra-box {
+        padding: 10px 14px;
+    }
+
+    .mantra-box h4 {
+        font-size: 14px;
+    }
+
+    .remedy-list li {
+        font-size: 13px;
+        padding: 6px 8px;
+        gap: 10px;
+    }
+
+    .list-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .list-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* --- CTA Section --- */
+    .premium-cta-section {
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-decorative-wing {
+        display: none;
+    }
+
+    .premium-cta-btn {
+        padding: 12px 20px 12px 16px;
+        gap: 10px;
+    }
+
+    .cta-text {
+        font-size: 14px;
+    }
+
+    .cta-subtext {
+        font-size: 12px;
+    }
+
+    /* --- NUI Banner (Not Under Influence) --- */
+    .nui-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    .nui-banner::after {
+        display: none;
+    }
+
+    .nui-avatar-group {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nui-content-group {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        margin-left: 0;
+        padding: 15px 0;
+    }
+
+    .nui-title {
+        font-size: 22px;
+    }
+
+    .nui-desc {
+        font-size: 13px;
+    }
+
+    .nui-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nui-feature-sep {
+        display: none;
+    }
+
+    .nui-cta-group {
+        padding-left: 0;
+        align-items: center;
+        text-align: center;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .nui-cta-text {
+        font-size: 13px;
+    }
+
+    .nui-cta-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    /* --- Prediction Center Avatar --- */
+    .prediction-center-avatar {
+        margin-bottom: 15px;
+    }
+
+    .avatar-ring {
+        width: 80px;
+        height: 80px;
+    }
+
+    .prediction-status-text h2 {
+        font-size: 20px;
+    }
+
+    .prediction-status-text p {
+        font-size: 13px;
+    }
+
+    /* --- House Details --- */
+    .house-details-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .quote-text {
+        font-size: 15px;
+    }
+
+    .keyword-list li {
+        font-size: 11px;
+    }
+}
+
+/* ========================================================================
+   EXTRA SMALL MOBILE FIXES (375px and below)
+   ======================================================================== */
+@media (max-width: 375px) {
+
+    #resultsSection {
+        padding: 8px 6px 12px 6px;
+    }
+
+    .premium-section-title {
+        font-size: 20px;
+    }
+
+    .birth-details-card.premium-card {
+        padding: 16px 10px;
+    }
+
+    .zodiac-image-ring {
+        width: 85px;
+        height: 85px;
+    }
+
+    .zodiac-title {
+        font-size: 20px;
+    }
+
+    .detail-item {
+        grid-template-columns: 32px 1fr;
+        padding: 12px 12px;
+        gap: 0 10px;
+    }
+
+    .detail-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+    }
+
+    .detail-icon svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .detail-label {
+        font-size: 11px;
+    }
+
+    .detail-text-col {
+        grid-template-columns: 88px 1fr;
+        gap: 0 12px;
+    }
+
+    .detail-value {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .afflictions-title {
+        font-size: 20px;
+    }
+
+    .premium-affliction-card {
+        padding: 25px 16px 16px;
+    }
+
+    .card-heading {
+        font-size: 16px;
+    }
+
+    .accordion-header {
+        padding: 8px 10px;
+    }
+
+    .acc-icon-wrap {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .acc-icon-wrap svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .acc-title {
+        font-size: 14px;
+    }
+
+    .acc-subtitle {
+        font-size: 11px;
+    }
+
+    .acc-toggle {
+        width: 28px;
+        height: 28px;
+    }
+
+    .accordion-body {
+        padding: 0 10px 16px 10px;
+    }
+
+    .prediction-body-timeline,
+    .sadesati-body-timeline {
+        padding: 12px 10px 16px 10px !important;
+    }
+
+    .remedy-card {
+        padding: 16px;
+    }
+
+    .remedy-title-area h3 {
+        font-size: 18px;
+    }
+
+    .rem-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nui-title {
+        font-size: 20px;
     }
 }

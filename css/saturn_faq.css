@@ -19,6 +19,12 @@
     background-size: cover;
     opacity: 0.8;
     pointer-events: none;
+    animation: faq-slow-rotate 60s linear infinite;
+}
+
+@keyframes faq-slow-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .faq-bg-ornament.top-left {
@@ -140,6 +146,7 @@
 .faq-item:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
 }
 
 .faq-item.active {
@@ -164,11 +171,22 @@
     color: #3b1766;
     background-color: #fdfaf6;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover .faq-icon-circle {
+    background-color: #f7f1fc;
+    border-color: #3b1766;
 }
 
 .faq-icon-circle svg {
     width: 22px;
     height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover .faq-icon-circle svg {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .faq-icon-star {
@@ -177,6 +195,12 @@
     right: -5px;
     color: #d4af37;
     font-size: 12px;
+    animation: faq-star-twinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes faq-star-twinkle {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
 }
 
 /* Vertical Divider */

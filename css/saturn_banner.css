@@ -442,46 +442,160 @@
     /* Vibrant purple */
 }
 
+/* Fix dropdown stacking contexts */
+.input-card {
+    position: relative;
+}
+
+.input-card:nth-child(1) {
+    z-index: 10;
+}
+
+.input-card:nth-child(2) {
+    z-index: 9;
+}
+
+.input-card:nth-child(3) {
+    z-index: 8;
+}
+
+.input-card:nth-child(4) {
+    z-index: 7;
+}
+
 .multi-select-group {
     display: flex;
     gap: 6px;
     /* Reduced gap */
 }
 
-.single-input-group,
-.multi-select-group select,
-.single-input-group input,
-.single-input-group select {
+/* Custom Select Styles */
+.custom-select-wrapper {
+    position: relative;
     width: 100%;
+    flex: 1;
+    min-width: 0;
+    /* allows flex items to shrink below their min-content size */
 }
 
-.multi-select-group select,
-.single-input-group select,
-.single-input-group input {
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 8px 10px;
-    /* Reduced padding to fit text */
-    font-size: 13px;
+.custom-select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    font-size: 14px;
     border: 1px solid #e8e6d9;
-    border-radius: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #1e293b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    height: 42px;
+}
+
+.custom-select-trigger span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Fix for form text hiding (ellipsis) on laptop screens */
+.multi-select-group .custom-select-trigger {
+    padding: 8px 8px; /* Reduced side padding to prevent text truncation */
+    font-size: 13px;  /* Slightly smaller font to fit longer words like 'Minute' */
+}
+
+.multi-select-group .custom-select-trigger svg {
+    margin-left: 4px;
+    width: 14px; /* Slightly smaller icon to save space */
+}
+
+.custom-select-trigger svg {
+    width: 16px;
+    height: 16px;
+    color: #d4af37;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.custom-select-wrapper.open .custom-select-trigger {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.custom-select-wrapper.open .custom-select-trigger svg {
+    transform: rotate(180deg);
+}
+
+.custom-select-options {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+}
+
+.custom-select-wrapper.open .custom-select-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.custom-select-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #334155;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.custom-select-item:hover,
+.custom-select-item.selected {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+/* Custom Scrollbar for Dropdown */
+.custom-select-options::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-select-options::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-select-options::-webkit-scrollbar-thumb {
+    background: #c4b5fd;
+    border-radius: 10px;
+}
+
+.single-input-group input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #e8e6d9;
+    border-radius: 12px;
     background-color: #ffffff;
     color: #1e293b;
     outline: none;
     transition: all 0.2s;
-    font-family: 'Inter', sans-serif;
-    text-overflow: ellipsis;
+    height: 42px;
 }
 
-/* Custom Dropdown Arrow */
-.multi-select-group select,
-.single-input-group select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23d4af37'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 12px;
-    padding-right: 22px;
-    /* Reduced right padding */
+.single-input-group input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
 }
 
 .multi-select-group select:focus,
@@ -702,8 +816,13 @@
     }
 
     .calc-card {
-        width: calc(100% - 60px);
+        width: calc(100% - 30px);
         max-width: none;
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 0.85fr 1.15fr;
     }
 
     .saturn-submit-btn {
@@ -727,21 +846,35 @@
         font-weight: 700;
     }
 
+    .input-card {
+        padding: 14px 10px; /* Reduced from 18px to give more room horizontally */
+    }
+
     .multi-select-group {
         gap: 3px;
     }
 
     .multi-select-group select,
     .single-input-group select,
-    .single-input-group input {
-        border-radius: 12px;
-        padding: 8px 2px 8px 4px;
-        /* Extremely tight padding to fit text */
-        font-size: 11px;
-        /* Smaller font to ensure 'Minute' and 'Second' fit */
+    .single-input-group input,
+    .multi-select-group .custom-select-trigger,
+    .single-input-group .custom-select-trigger {
+        border-radius: 10px;
+        padding: 8px 4px;
+        font-size: 13px; /* Increased font size for better readability */
         font-weight: 500;
-        letter-spacing: -0.2px;
-        /* Pull text in slightly */
+        letter-spacing: 0; /* Removed negative letter spacing */
+    }
+
+    .multi-select-group .custom-select-trigger svg {
+        margin-left: 0px;
+        width: 12px;
+        min-width: 12px;
+    }
+
+    .multi-select-group .custom-select-trigger span {
+        text-overflow: clip; /* Prevent premature ellipsis if 1-2 pixels short */
+        white-space: nowrap;
     }
 
     .multi-select-group select {
@@ -890,7 +1023,7 @@
     /* Birth Date 3-col Grid */
     .input-card:nth-child(1) .multi-select-group {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1.3fr 1fr;
         gap: 8px;
     }
 
@@ -904,10 +1037,15 @@
     /* Adjust inputs to be slightly less pill-shaped on mobile */
     .multi-select-group select,
     .single-input-group select,
-    .single-input-group input {
+    .single-input-group input,
+    .multi-select-group .custom-select-trigger,
+    .single-input-group .custom-select-trigger {
         border-radius: 12px;
         padding: 12px 10px;
+        font-size: 14px;
         font-weight: 500;
+        height: 46px;
+        /* slightly taller for mobile touch */
     }
 
     .calculator-overlap-section {
